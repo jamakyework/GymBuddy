@@ -2,13 +2,13 @@ var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var passport = require('./strategies/userStrategy');
+var passport = require('../strategies/userStrategy');
 
 //require routers
-var indexRouter = require('./routes/index');
-var registerRouter = require('./routes/register');
-var homeRouter = require('./routes/home');
-var XYZRouter = require('./routes/XYZRoute'); // new route
+var indexRouter = require('../routes/index');
+var registerRouter = require('../routes/register');
+var homeRouter = require('../routes/home');
+var XYZRouter = require('../routes/XYZRoute'); // new route
 
 var app = express();
 
@@ -33,7 +33,7 @@ app.use('/', indexRouter);
 app.use('/register', registerRouter);
 app.use('/home', homeRouter);
 app.use('/getItem', XYZRouter); //new router
-app.use('/addItem', XYZRouter); //new router 
+app.use('/addItem', XYZRouter); //new router
 
 // server port set and listen
 var serverPort = process.env.port || 8000;
@@ -44,7 +44,7 @@ var server = app.listen(serverPort, function() {
 });
 
 // connect to the mongodb
-var mongoURI = "mongodb://localhost:27017/shelfDatabase";
+var mongoURI = "mongodb://localhost:27017/XYZDB";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {

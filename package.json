@@ -1,0 +1,40 @@
+{
+  "name": "gymbuddy",
+  "version": "1.0.0",
+  "description": "GymBuddy Workout planner is a full stack web application that will allow users to create and track workouts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamakyework/GymBuddy.git"
+  },
+  "keywords": [
+    "GymBuddy",
+    "Workout planner",
+    "full stack",
+    "web application",
+    "create and track workouts"
+  ],
+  "author": "John Amakye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamakyework/GymBuddy/issues"
+  },
+  "homepage": "https://github.com/jamakyework/GymBuddy#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.7.7",
+    "node": "0.0.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
