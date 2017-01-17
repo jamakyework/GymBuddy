@@ -95,3 +95,8 @@ Password recovery option; help users recover account if password is lost
 Delete account option; option for users to delete account if they no longer want to use application
 Option to check off exercise when completed for the day
 Monthly email report/summary of workouts indicating days worked out and exercises completed
+
+Steps completed
+---------------
+ [] featureBranch 1 - User Login and Authentication/User Database
+ [] featureBranch 2 - 
