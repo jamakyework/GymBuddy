@@ -49,6 +49,29 @@ myApp.controller('registerController',['$scope', '$http', '$window',
   };
 }]);
 
+myApp.controller('crudController',['$scope', '$http', '$window',
+  function($scope, $http, $window) {
+  console.log('inside crud controller');
+
+    $scope.crud = function() {
+      // var customWorkout
+
+      $http({
+        method: 'GET',
+        url: '/crudView',
+      }).then(function successCallback(response) {
+        console.log('success', response);
+        $window.location.href = '/';
+      }, function errorCallback(error) {
+        console.log('error occurred!');
+      });
+    };
+  }]);
+
+// myApp.controller('navCtrl', function($scope) {
+//     $scope.names = ["Emil", "Tobias", "Linus", "James","Kofi", "Kwame"];
+// });
+
 // myApp.controller('HomeController',['$scope', '$http', '$window',
 //   function($scope, $http, $window) {
 //   console.log('inside AddItemController');

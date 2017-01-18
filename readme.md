@@ -99,4 +99,4 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 Steps completed
 ---------------
  [] featureBranch 1 - User Login and Authentication/User Database
- [] featureBranch 2 - 
+ [] featureBranch 2 - Create Views

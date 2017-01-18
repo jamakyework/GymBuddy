@@ -8,6 +8,7 @@ var passport = require('../strategies/userStrategy');
 var indexRouter = require('../routes/index');
 var registerRouter = require('../routes/register');
 var homeRouter = require('../routes/home');
+var getStarted = require('../routes/getStarted');//new route
 var XYZRouter = require('../routes/XYZRoute'); // new route
 
 var app = express();
@@ -32,8 +33,10 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
 app.use('/home', homeRouter);
+app.use('/getStarted', getStarted); //new router
 app.use('/getItem', XYZRouter); //new router
 app.use('/addItem', XYZRouter); //new router
+
 
 // server port set and listen
 var serverPort = process.env.port || 8000;

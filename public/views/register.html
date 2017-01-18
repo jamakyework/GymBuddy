@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Passport Lecture</title>
+
+<head>
+    <meta charset="utf-8">
+    <title>GymBuddy - Workout Planning Made Easy</title>
+    <link href="./vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
-    <script src="./style/style.css" charset="utf-8"></script>
-  </head>
-    <body ng-app="myApp">
-      <h1>Passport Register</h1>
-      <form ng-controller="registerController">
+</head>
+
+<body ng-app="myApp">
+    <h1>Passport Register</h1>
+    <form ng-controller="registerController">
         <div>
-          <label for="username">Username:</label>
-          <input ng-model="username" type="text" name="username" id="username"/>
+            <label for="username">Username:</label>
+            <input ng-model="username" type="text" name="username" id="username" />
         </div>
         <div>
-          <label for="password">Password:</label>
-          <input ng-model="password" type="password" name="password" id="password"/>
+            <label for="password">Password:</label>
+            <input ng-model="password" type="password" name="password" id="password" />
         </div>
         <div>
-          <input ng-click="register()" type="submit" value="Register"/>
+            <input ng-click="register()" type="submit" value="Register" />
         </div>
-      </form>
-  </body>
+    </form>
+</body>
+
 </html>
