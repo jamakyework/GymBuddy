@@ -23,6 +23,9 @@
     </div>
     <div ng-repeat='workout in workouts'>
         {{workout}}
+        {{workout.name}}
+        {{workout.description}}
+        <img ng-src="{{workout.imageUrl}}"
     </div>
 </body>
 

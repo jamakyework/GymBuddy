@@ -51,65 +51,64 @@ myApp.controller('registerController', ['$scope', '$http', '$window',
     }
 ]);
 
-
-//connect to API
-myApp.controller("exerciseController", ["$scope", '$http', function($scope, $http) {
-    console.log("exerciseController..its working....");
-
-    $scope.searchExerciseFunc = function() {
-        var searchExercise = $scope.searchExercise;
-        var exerciseURL = "https://wger.de/api/v2/exercise.json/";//pulls data from API
-
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";//
-
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/";
-        // var exerciseURL = "https://wger.de/api/v2/exercise.json/?" + searchExercise;
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json" + searchExercise;
-        $scope.exercises = [];
-        $http({
-            method: 'GET',
-            url: exerciseURL,
-            dataType: "JSON",
-        }).then(function successCallback(response) {
-            console.log("This is response:", response);
-            // console.log("This is in results:", response.data.results);
-            // console.log("This is in results[0]:", response.data.results[0]);
-            // console.log("This is in results:", response.results.name);
-            $scope.exercises = response.data.results;
-            console.log("$scope.exercises:", $scope.exercises);
-        }, function errorCallback(error) {
-            console.log('error', error);
-        });
-    };
-}]);
-
-
 myApp.controller('createWorkoutController',['$scope', '$http', '$window',
   function($scope, $http, $window) {
   console.log('inside createWorkoutController');
     $scope.addWorkoutFunc = function() {
-      $scope.workouts = [];
+      // $scope.workouts = [];
       var addWorkout = {
             name: $scope.name,
             description: $scope.description,
             imageUrl: $scope.imageUrl
           };
-    $scope.workouts.push(addWorkout);
-        console.log("workouts:", $scope.workouts);
+    // $scope.workouts.push(addWorkout);
+        console.log("workouts:", addWorkout);
 
       $http({
         method: 'POST',
         url: '/addWorkout',
-        data: $scope.workouts
+        data: addWorkout
       }).then(function successCallback(response) {
         console.log('success', response);
-        // $window.location.href = '/';
+        $window.location.reload();
       }, function errorCallback(error) {
         console.log('error occurred!');
       });
-
     };
   }]);
+
+
+// //connect to API
+// myApp.controller("exerciseController", ["$scope", '$http', function($scope, $http) {
+//     console.log("exerciseController..its working....");
+//
+//     $scope.searchExerciseFunc = function() {
+//         var searchExercise = $scope.searchExercise;
+//         var exerciseURL = "https://wger.de/api/v2/exercise.json/";//pulls data from API
+//
+//         // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";//
+//
+//         // var exerciseURL = "https://wger.de/api/v2/exercise.api/";
+//         // var exerciseURL = "https://wger.de/api/v2/exercise.json/?" + searchExercise;
+//         // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json" + searchExercise;
+//         $scope.exercises = [];
+//         $http({
+//             method: 'GET',
+//             url: exerciseURL,
+//             dataType: "JSON",
+//         }).then(function successCallback(response) {
+//             console.log("This is response:", response);
+//             // console.log("This is in results:", response.data.results);
+//             // console.log("This is in results[0]:", response.data.results[0]);
+//             // console.log("This is in results:", response.results.name);
+//             $scope.exercises = response.data.results;
+//             console.log("$scope.exercises:", $scope.exercises);
+//         }, function errorCallback(error) {
+//             console.log('error', error);
+//         });
+//     };
+// }]);
+
 
 // myApp.controller('navCtrl', function($scope) {
 //     $scope.names = ["Emil", "Tobias", "Linus", "James","Kofi", "Kwame"];
