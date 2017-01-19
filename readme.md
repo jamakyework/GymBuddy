@@ -100,3 +100,5 @@ Steps completed
 ---------------
  [] featureBranch 1 - User Login and Authentication/User Database
  [] featureBranch 2 - Create Views
+ [] featureBranch 3 - Connect to API
+ [] featureBranch 4 - Connect Views to logic
