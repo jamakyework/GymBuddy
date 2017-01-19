@@ -79,8 +79,8 @@ Optimized for Mobile (Android)
 While completing this estimate the following assumptions were made:
 * wger Workout Manager API will not change
 * Browser compatibility will remain if new browser version is released
-Technologies:
--------------
+
+##Technologies:
 * Node
 * Express
 * Angular
