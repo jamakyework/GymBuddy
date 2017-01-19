@@ -76,16 +76,17 @@ Version 55.0.2883.95 (64-bit)
 Optimized for Mobile (Android)
 
 ##Assumptions
-While completing this estimate the following assumptions were made
-wger Workout Manager API will not change
-Browser compatibility will remain if new browser version is released
-Technologies
-Node
-Express
-Angular
-wger Workout Manager API
-MongoDB
-Heroku
+While completing this estimate the following assumptions were made:
+* wger Workout Manager API will not change
+* Browser compatibility will remain if new browser version is released
+Technologies:
+-------------
+* Node
+* Express
+* Angular
+* wger Workout Manager API
+* MongoDB
+* Heroku
 
 ##Stretch Goals/Future Enhancements
 Add personal fitness tracking connectivity; Future enhancements to this application could be potential integration with a fitness tracker to record exercise data
@@ -98,7 +99,7 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 
 Steps completed
 ---------------
- [] featureBranch 1 - User Login and Authentication/User Database
- [] featureBranch 2 - Create Views
- [] featureBranch 3 - Connect to API
- [] featureBranch 4 - Connect Views to logic
+ * [x] featureBranch 1 - User Login and Authentication/User Database
+ * [] featureBranch 2 - Create Views
+ * [] featureBranch 3 - Connect to API
+ * [] featureBranch 4 - Connect Views to logic
