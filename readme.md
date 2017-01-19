@@ -80,7 +80,7 @@ While completing this estimate the following assumptions were made:
 * wger Workout Manager API will not change
 * Browser compatibility will remain if new browser version is released
 
-##Technologies:
+##Technologies
 * Node
 * Express
 * Angular
@@ -97,9 +97,9 @@ Delete account option; option for users to delete account if they no longer want
 Option to check off exercise when completed for the day
 Monthly email report/summary of workouts indicating days worked out and exercises completed
 
-Steps completed
----------------
+##Steps completed
  * [x] featureBranch 1 - User Login and Authentication/User Database
  * [] featureBranch 2 - Create Views
- * [] featureBranch 3 - Connect to API
- * [] featureBranch 4 - Connect Views to logic
+ * [] featureBranch 3 - Add/Create Workout (Will like to collect user input from dom and create workout in DB)
+ * [] featureBranch 4 - Connect to API
+ * [] featureBranch 5 - Connect Views to logic

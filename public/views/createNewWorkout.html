@@ -11,18 +11,19 @@
 </head>
 
 <body ng-app="myApp">
-<h1> Create New Workout</h1>
-<form>
-  Name: <input type="text" name="name">
-  <br>
-  Description: <textarea name="description"> </textarea>
-  <br>
-  Enter ImageUrl<input type="text" name="" value="">
-  <br>
-  <button type="button" name="button"> Submit </button>
-</form>
-
-
+    <div ng-controller="createWorkoutController">
+        <h1> Create New Workout</h1>
+        <form>
+            Name: <input type="text" name="name" ng-model="name">
+            <br> Description: <textarea name="description" ng-model="description"> </textarea>
+            <br> Enter ImageUrl<input type="text" name="" value="" ng-model="imageUrl">
+            <br>
+            <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
+        </form>
+    </div>
+    <div ng-repeat='workout in workouts'>
+        {{workout}}
+    </div>
 </body>
 
 </html>

@@ -55,6 +55,7 @@ myApp.controller('registerController', ['$scope', '$http', '$window',
 //connect to API
 myApp.controller("exerciseController", ["$scope", '$http', function($scope, $http) {
     console.log("exerciseController..its working....");
+
     $scope.searchExerciseFunc = function() {
         var searchExercise = $scope.searchExercise;
         var exerciseURL = "https://wger.de/api/v2/exercise.json/";//pulls data from API
@@ -74,7 +75,6 @@ myApp.controller("exerciseController", ["$scope", '$http', function($scope, $htt
             // console.log("This is in results:", response.data.results);
             // console.log("This is in results[0]:", response.data.results[0]);
             // console.log("This is in results:", response.results.name);
-
             $scope.exercises = response.data.results;
             console.log("$scope.exercises:", $scope.exercises);
         }, function errorCallback(error) {
@@ -84,24 +84,32 @@ myApp.controller("exerciseController", ["$scope", '$http', function($scope, $htt
 }]);
 
 
-// myApp.controller('crudController',['$scope', '$http', '$window',
-//   function($scope, $http, $window) {
-//   console.log('inside crud controller');
-//
-//     $scope.crud = function() {
-//       // var customWorkout
-//
-//       $http({
-//         method: 'GET',
-//         url: '/crudView',
-//       }).then(function successCallback(response) {
-//         console.log('success', response);
-//         $window.location.href = '/';
-//       }, function errorCallback(error) {
-//         console.log('error occurred!');
-//       });
-//     };
-//   }]);
+myApp.controller('createWorkoutController',['$scope', '$http', '$window',
+  function($scope, $http, $window) {
+  console.log('inside createWorkoutController');
+    $scope.addWorkoutFunc = function() {
+      $scope.workouts = [];
+      var addWorkout = {
+            name: $scope.name,
+            description: $scope.description,
+            imageUrl: $scope.imageUrl
+          };
+    $scope.workouts.push(addWorkout);
+        console.log("workouts:", $scope.workouts);
+
+      $http({
+        method: 'POST',
+        url: '/addWorkout',
+        data: $scope.workouts
+      }).then(function successCallback(response) {
+        console.log('success', response);
+        // $window.location.href = '/';
+      }, function errorCallback(error) {
+        console.log('error occurred!');
+      });
+
+    };
+  }]);
 
 // myApp.controller('navCtrl', function($scope) {
 //     $scope.names = ["Emil", "Tobias", "Linus", "James","Kofi", "Kwame"];

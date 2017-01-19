@@ -8,9 +8,11 @@ var passport = require('../strategies/userStrategy');
 var indexRouter = require('../routes/index');
 var registerRouter = require('../routes/register');
 var homeRouter = require('../routes/home');
-var searchAPI = require('../routes/searchAPI'); //new route
 var getStarted = require('../routes/getStarted');//new route
 var XYZRouter = require('../routes/XYZRoute'); // new route
+var searchAPI = require('../routes/searchAPI'); //new route
+var createNewWorkout = require('../routes/createNewWorkout');
+
 
 var app = express();
 
@@ -38,6 +40,7 @@ app.use('/getStarted', getStarted); //new router
 app.use('/getItem', XYZRouter); //new router
 app.use('/addItem', XYZRouter); //new router
 app.use('/searchAPI', searchAPI);//new router
+app.use('/addWorkout', createNewWorkout); //new router
 
 
 // server port set and listen
