@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GymBuddy - Workout Planning Made Easy - Create New Exercise</title>
+    <link href="./vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="./scripts/client.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <body ng-app="myApp">
+      <div ng-controller="createExerciseController">
+          <h1> Create New Workout</h1>
+          <form>
+              Name: <input type="text" name="name" ng-model="name">
+              <br> Description: <textarea name="description" ng-model="description"> </textarea>
+              <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
+              <br>
+              <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
+              <br>
+              <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button>
+          </form>
+            </div>
+
+        <div ng-controller="viewExerciseController">
+            <button type="button" name="button" ng-click="viewExerciseFunc()">View Existing Exercises</button>
+      <div ng-repeat='exercise in exercises'>
+          Name: {{exercise.name}}
+          <br>
+          Description: {{exercise.description}}
+          <br>
+          Image: <img ng-src="{{exercise.imageUrl}}">
+      </div>
+    </div>
+
+  </body>
+  </html>
+</body>
+
+</html>

@@ -42,8 +42,8 @@ app.use('/addItem', XYZRouter); //test post route
 app.use('/getStarted', getStarted); //new router
 app.use('/searchAPI', searchAPI);//new router
 app.use('/workout', workoutHTML);//new router
-app.use('/addWorkout', workoutRouter); //workout post route
-app.use('/getWorkout', workoutRouter); //workout get route
+// app.use('/addWorkout', workoutRouter); //workout post route
+// app.use('/getWorkout', workoutRouter); //workout get route
 
 
 // server port set and listen

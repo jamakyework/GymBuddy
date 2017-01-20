@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GymBuddy - Workout Planning Made Easy</title>
+    <title>GymBuddy - Workout Planning Made Easy - Create New Workout</title>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
@@ -19,16 +19,19 @@
             <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
             <br>
             <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
+            <br>
+            <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button>
         </form>
           </div>
 
       <div ng-controller="viewWorkoutController">
           <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
     <div ng-repeat='workout in workouts'>
-        {{workout}}
-        {{workout.name}}
-        {{workout.description}}
-        <img ng-src="{{workout.imageUrl}}">
+        Name: {{workout.name}}
+        <br>
+        Description: {{workout.description}}
+        <br>
+        Image: <img ng-src="{{workout.imageUrl}}">
     </div>
   </div>
 

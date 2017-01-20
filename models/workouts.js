@@ -10,3 +10,5 @@ var workoutSchema = new Schema({
 var workouts = mongoose.model('workouts', workoutSchema);
 
 module.exports = workouts;
+
+//will need schema of exercises
