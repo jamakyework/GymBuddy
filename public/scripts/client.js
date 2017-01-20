@@ -3,7 +3,7 @@ console.log("NG");
 
 myApp.controller('mainController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-        console.log('inside main controller');
+        console.log('in main controller');
 
         $scope.login = function() {
 
@@ -29,7 +29,7 @@ myApp.controller('mainController', ['$scope', '$http', '$window',
 
 myApp.controller('registerController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-        console.log('inside register controller');
+        console.log('in register controller');
 
         $scope.register = function() {
             var userInfo = {
@@ -53,17 +53,16 @@ myApp.controller('registerController', ['$scope', '$http', '$window',
 
 myApp.controller('createWorkoutController',['$scope', '$http', '$window',
   function($scope, $http, $window) {
-  console.log('inside createWorkoutController');
+  console.log('in createWorkoutController');
     $scope.addWorkoutFunc = function() {
-      // $scope.workouts = [];
+      $scope.workouts = [];
       var addWorkout = {
             name: $scope.name,
             description: $scope.description,
             imageUrl: $scope.imageUrl
           };
-    // $scope.workouts.push(addWorkout);
+      // $scope.workouts.push(addWorkout);
         console.log("workouts:", addWorkout);
-
       $http({
         method: 'POST',
         url: '/addWorkout',
@@ -76,6 +75,23 @@ myApp.controller('createWorkoutController',['$scope', '$http', '$window',
       });
     };
   }]);
+
+  myApp.controller('viewWorkoutController',['$scope', '$http',
+  function($scope, $http) {
+    $scope.workouts = [];
+    console.log('viewWorkoutController');
+      $scope.viewWorkoutFunc= function(){ $http({
+        method: 'GET',
+        url: '/getWorkout',
+      }).then(function successCallback(response) {
+        console.log("response:", response);
+        $scope.workouts = response.data;
+        console.log("$scope.workouts:", $scope.workouts);
+      }, function errorCallback(error) {
+        console.log('error', error);
+      });
+    };
+    }]);
 
 
 // //connect to API
@@ -109,10 +125,6 @@ myApp.controller('createWorkoutController',['$scope', '$http', '$window',
 //     };
 // }]);
 
-
-// myApp.controller('navCtrl', function($scope) {
-//     $scope.names = ["Emil", "Tobias", "Linus", "James","Kofi", "Kwame"];
-// });
 
 // myApp.controller('HomeController',['$scope', '$http', '$window',
 //   function($scope, $http, $window) {

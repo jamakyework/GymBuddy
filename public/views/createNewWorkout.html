@@ -16,17 +16,21 @@
         <form>
             Name: <input type="text" name="name" ng-model="name">
             <br> Description: <textarea name="description" ng-model="description"> </textarea>
-            <br> Enter ImageUrl<input type="text" name="" value="" ng-model="imageUrl">
+            <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
             <br>
             <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
         </form>
-    </div>
+          </div>
+
+      <div ng-controller="viewWorkoutController">
+          <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
     <div ng-repeat='workout in workouts'>
         {{workout}}
         {{workout.name}}
         {{workout.description}}
-        <img ng-src="{{workout.imageUrl}}"
+        <img ng-src="{{workout.imageUrl}}">
     </div>
-</body>
+  </div>
 
+</body>
 </html>

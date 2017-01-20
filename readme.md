@@ -99,7 +99,7 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 
 ##Steps completed
  * [x] featureBranch 1 - User Login and Authentication/User Database
- * [x] featureBranch 2 - Add/Create Workout (Will like to collect user input from dom and create workout in DB)
+ * [x] featureBranch 2 - Add/Create/View Workout 
  * [] featureBranch 3 - Create Views
  * [] featureBranch 4 - Connect to API
  * [] featureBranch 5 - Connect Views to logic

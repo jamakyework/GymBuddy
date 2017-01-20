@@ -8,10 +8,11 @@ var passport = require('../strategies/userStrategy');
 var indexRouter = require('../routes/index');
 var registerRouter = require('../routes/register');
 var homeRouter = require('../routes/home');
+var XYZRouter = require('../routes/XYZRoute'); // test route
 var getStarted = require('../routes/getStarted');//new route
-var XYZRouter = require('../routes/XYZRoute'); // new route
 var searchAPI = require('../routes/searchAPI'); //new route
-var createNewWorkout = require('../routes/createNewWorkout');
+var workoutHTML = require('../routes/workoutHTML'); //new route
+var workoutRouter = require('../routes/workoutRoute'); //new route
 
 
 var app = express();
@@ -36,11 +37,13 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
 app.use('/home', homeRouter);
+app.use('/getItem', XYZRouter); //test get route
+app.use('/addItem', XYZRouter); //test post route
 app.use('/getStarted', getStarted); //new router
-app.use('/getItem', XYZRouter); //new router
-app.use('/addItem', XYZRouter); //new router
 app.use('/searchAPI', searchAPI);//new router
-app.use('/addWorkout', createNewWorkout); //new router
+app.use('/workout', workoutHTML);//new router
+app.use('/addWorkout', workoutRouter); //workout post route
+app.use('/getWorkout', workoutRouter); //workout get route
 
 
 // server port set and listen
