@@ -14,15 +14,15 @@
 <body>
   <body ng-app="myApp">
       <div ng-controller="createExerciseController">
-          <h1> Create New Workout</h1>
+          <h1> Create New Exercise </h1>
           <form>
               Name: <input type="text" name="name" ng-model="name">
               <br> Description: <textarea name="description" ng-model="description"> </textarea>
               <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
               <br>
-              <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
+              <button type="button" name="button" ng-click="addExerciseFunc()"> Submit </button>
               <br>
-              <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button>
+              <!-- <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button> -->
           </form>
             </div>
 
@@ -34,6 +34,8 @@
           Description: {{exercise.description}}
           <br>
           Image: <img ng-src="{{exercise.imageUrl}}">
+          <br>
+          <button type="button" name="button" ng-click="addtoWorkout()"> Add to workout</button>
       </div>
     </div>
 

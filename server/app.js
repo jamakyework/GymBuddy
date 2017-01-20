@@ -11,8 +11,8 @@ var homeRouter = require('../routes/home');
 var XYZRouter = require('../routes/XYZRoute'); // test route
 var getStarted = require('../routes/getStarted');//new route
 var searchAPI = require('../routes/searchAPI'); //new route
-var workoutHTML = require('../routes/workoutHTML'); //new route
 var workoutRouter = require('../routes/workoutRoute'); //new route
+var exerciseRouter = require('../routes/exerciseRoute'); //new route
 
 
 var app = express();
@@ -41,9 +41,10 @@ app.use('/getItem', XYZRouter); //test get route
 app.use('/addItem', XYZRouter); //test post route
 app.use('/getStarted', getStarted); //new router
 app.use('/searchAPI', searchAPI);//new router
-app.use('/workout', workoutHTML);//new router
-// app.use('/addWorkout', workoutRouter); //workout post route
-// app.use('/getWorkout', workoutRouter); //workout get route
+app.use('/workout', workoutRouter);//new router
+app.use('/', workoutRouter); //workout post/get route
+app.use('/exercise', exerciseRouter);//new router
+app.use('/', exerciseRouter); //exercise/post/get route
 
 
 // server port set and listen

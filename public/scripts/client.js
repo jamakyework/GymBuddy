@@ -115,17 +115,17 @@ myApp.controller('createWorkoutController',['$scope', '$http', '$window',
         };
       }]);
 
-      myApp.controller('viewWorkoutController',['$scope', '$http',
+      myApp.controller('viewExerciseController',['$scope', '$http',
       function($scope, $http) {
-        $scope.workouts = [];
-        console.log('viewWorkoutController');
-          $scope.viewWorkoutFunc= function(){ $http({
+        $scope.exercises = [];
+        console.log('viewExerciseController');
+          $scope.viewExerciseFunc= function(){ $http({
             method: 'GET',
-            url: '/getWorkout',
+            url: '/getExercise',
           }).then(function successCallback(response) {
             console.log("response:", response);
-            $scope.workouts = response.data;
-            console.log("$scope.workouts:", $scope.workouts);
+            $scope.exercises = response.data;
+            console.log("$scope.exercises:", $scope.exercises);
           }, function errorCallback(error) {
             console.log('error', error);
           });
