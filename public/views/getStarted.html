@@ -18,26 +18,30 @@
         <div ng-controller="getStartedController">
             <form name="getStarted">
                 <label>
-            <input type="radio" name="workout" value="createNewWorkout" ng-model="getStarted">
-            Create New Workout
-          </label><br>
+            <input type="radio" name="workout" value="createWorkout" ng-model="getStarted">
+            Create Workout
+          </label>
+                <br>
                 <label>
-            <input type="radio" name="workout" value="viewExistingWorkout" ng-model="getStarted">
-            View Existing Workout
-          </label><br>
+            <input type="radio" name="workout" value="viewWorkout" ng-model="getStarted">
+            View Workout
+          </label>
+                <br>
                 <label>
-            <input type="radio" name="workout" value="searchForExercise" ng-model="getStarted">
-            Search For Exercise
-          </label><br>
+            <input type="radio" name="workout" value="createExercise"ng-model="getStarted">
+          Create Exercise
+          </label>
+                <br>
                 <label>
-            <input type="radio" name="workout" value="addCustomExercise"ng-model="getStarted">
-            Add Custom Exercise
-          </label><br>
-          <label>
-            <input type="radio" name="workout" value="viewExistingExercise" ng-model="getStarted">
-            View Existing Exercise
-          </label><br>
-            <!-- <label>
+            <input type="radio" name="workout" value="viewExercise" ng-model="getStarted">
+            View Exercise
+          </label>
+                <br>
+                <label>
+      <input type="radio" name="workout" value="searchForExercise" ng-model="getStarted">
+      Search For Exercise
+    </label>
+                <!-- <label>
               <input type="radio" name="workout" value="editExistingCustomExercise" ng-model="getStarted">
             Edit Existing Custom Exercise
           </label> -->

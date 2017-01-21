@@ -23,14 +23,13 @@
                 <br> Description: <textarea name="description" ng-model="description"> </textarea>
                 <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
                 <br>
-                <button type="button" name="button" ng-click="addWorkoutFunc()"> Submit </button>
+                <button type="button" name="button" ng-click="addWorkout()"> Submit </button>
                 <br>
-                <button type="button" name="button" ng-click="home()">Home</button>
+                <button type="button" name="button" ng-click="home()"> Home </button>
             </form>
         </div>
 
-
-        <div ng-controller="viewWorkoutController">
+        <!-- <div ng-controller="viewWorkoutController">
             <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
             <div ng-repeat='workout in workouts'>
                 Name: {{workout.name}}
@@ -38,12 +37,12 @@
                 <br> Image: <img ng-src="{{workout.imageUrl}}">
                 <br>
                 <button type="button" name="button" ng-click="selectWorkoutFunc()" ng-model="selectWorkout">Select</button>
-                <!-- select workout should add particular workout to workouts -->
-                <!-- or -->
-                <!-- select workout should change page to workout view -->
+                select workout should add particular workout to workouts
+                or
+                select workout should change page to workout view
 
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 

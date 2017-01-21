@@ -8,8 +8,10 @@ myApp.factory('workoutFactory', function() {
     // workoutFactory.users = [];
     workoutFactory.addWorkout = function(newWorkout) {
         this.workouts.push(newWorkout);
+        console.log("this.workouts:", this.workouts);
         return (this.workouts);
     };
+    console.log('workoutFactory:', workoutFactory);
     return workoutFactory;
 });
 
@@ -78,16 +80,16 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window',
             var selected = $scope.getStarted;
             console.log('selected:', selected);
 
-            if (selected === "createNewWorkout") {
+            if (selected === "createWorkout") {
                 $window.location.href = '/workout';
-            } else if (selected === "viewExistingWorkout") {
+            } else if (selected === "viewWorkout") {
                 $window.location.href = '/selectWorkout';
+            } else if (selected === "createExercise") {
+                $window.location.href = '/exercise';
+            } else if (selected === "viewExercise") {
+                $window.location.href = '/viewExercise';
             } else if (selected === "searchForExercise") {
                 $window.location.href = '/searchAPI';
-            } else if (selected === "addCustomExercise") {
-                $window.location.href = '/exercise';
-            } else if (selected === "viewExistingExercise") {
-                $window.location.href = '/viewExercise';
             }
         };
     }
@@ -110,13 +112,11 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
                 imageUrl: $scope.imageUrl
                     // user: need to attach user to workout;
             };
-            workoutFactory.addWorkout(addWorkout);
-            console.log("workouts:", addWorkout);
-            console.log("workoutFactory.workout:", workoutFactory.workout);
+            workoutFactory.addWorkout(newWorkout);
             $http({
                 method: 'POST',
                 url: '/addWorkout',
-                data: addWorkout
+                data: newWorkout
             }).then(function successCallback(response) {
                 console.log('success', response);
                 $window.location.reload();
@@ -130,11 +130,11 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
 
 myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-      console.log('viewWorkoutController');
+        console.log('viewWorkoutController');
 
-      $scope.home = function() {
-          $window.location.href = '/getStarted';
-      };
+        $scope.home = function() {
+            $window.location.href = '/getStarted';
+        };
 
         // $scope.selectWorkoutFunc = function() {
         //     var selected = $scope.selectWorkout;
@@ -195,8 +195,12 @@ myApp.controller('createExerciseController', ['$scope', '$http', '$window',
 ]);
 
 
-myApp.controller('viewExerciseController', ['$scope', '$http',
-function($scope, $http) {
+myApp.controller('viewExerciseController', ['$scope', '$http', '$window',
+    function($scope, $http, $window) {
+        $scope.home = function() {
+            $window.location.href = '/getStarted';
+        };
+
         $scope.exercises = [];
         console.log('viewExerciseController');
         $scope.viewExerciseFunc = function() {
@@ -217,39 +221,40 @@ function($scope, $http) {
 
 //connect to API
 myApp.controller("searchExerciseController", ["$scope", '$http', '$window',
- function($scope, $http, $window) {
-    console.log("exerciseController..its working....");
+    function($scope, $http, $window) {
+        console.log("exerciseController..its working....");
 
-    $scope.home = function() {
-        $window.location.href = '/getStarted';
-    };
+        $scope.home = function() {
+            $window.location.href = '/getStarted';
+        };
 
-    $scope.searchExerciseFunc = function() {
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";//
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/";
-        // var exerciseURL = "https://wger.de/api/v2/exercise.json/?";
-        // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";
+        $scope.searchExerciseFunc = function() {
+            // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";//
+            // var exerciseURL = "https://wger.de/api/v2/exercise.api/";
+            // var exerciseURL = "https://wger.de/api/v2/exercise.json/?";
+            // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";
 
-        var searchExercise = $scope.searchExercise;
-        var exerciseURL = "https://wger.de/api/v2/exercise.json/"; //pulls data from API
+            var searchExercise = $scope.searchExercise;
+            var exerciseURL = "https://wger.de/api/v2/exercise.json/"; //pulls data from API
 
-        $scope.exercises = [];
-        $http({
-            method: 'GET',
-            url: exerciseURL,
-            dataType: "JSON",
-        }).then(function successCallback(response) {
-            console.log("This is response:", response);
-            // console.log("This is in results:", response.data.results);
-            // console.log("This is in results[0]:", response.data.results[0]);
-            // console.log("This is in results:", response.results.name);
-            $scope.exercises = response.data.results;
-            console.log("$scope.exercises:", $scope.exercises);
-        }, function errorCallback(error) {
-            console.log('error', error);
-        });
-    };
-}]);
+            $scope.exercises = [];
+            $http({
+                method: 'GET',
+                url: exerciseURL,
+                dataType: "JSON",
+            }).then(function successCallback(response) {
+                console.log("This is response:", response);
+                // console.log("This is in results:", response.data.results);
+                // console.log("This is in results[0]:", response.data.results[0]);
+                // console.log("This is in results:", response.results.name);
+                $scope.exercises = response.data.results;
+                console.log("$scope.exercises:", $scope.exercises);
+            }, function errorCallback(error) {
+                console.log('error', error);
+            });
+        };
+    }
+]);
 
 
 // //need select workoutFunc which will take you to the specific workout page
