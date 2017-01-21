@@ -102,24 +102,30 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  * [x] featureBranch 2 - Add/Create/View Workout and Add/Create/View Exercise
  * [x] featureBranch 3 - Create Factory to pass data
  * [x] featureBranch 4 - Create Views
- * [] featureBranch 5 - Connect to API
+ * [x] featureBranch 5 - Connect to API
  * [] featureBranch 6 - Connect Views to logic
 
 
 
  Story of Gym Buddy
+ ------------------
  On the most base level what should Gym Buddy Do:
  [x] I want users to login.
  [x] I want users to register.
  [x] I want users to create workouts.
  [x] I want users to create exercises.
  [x] I want users to be able to view workouts.
- [] I want users to be able to select workouts.
- [] when select workout button clicked, should display only that workout that is clicked.
- [] After selecting Day I want users to be able to select  exercise.
- [] I want users to be able to add custom exercises to workout.
- [] After selecting workout  I want users to be able to select days.
+ [x] I want users to be able to view exercises.
+ [] I want users to be able to select workouts (when select workout button clicked, should display only the workout that is clicked)
+ [] I want users to be able to add exercises to selected workout.
+
+ Vers 2.0
+ --------
  [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+
+ [] I want users to be able to select workouts (when select workout button clicked, should display only the workout that is clicked)
+  [] After selecting workout  I want users to be able to select days.
+ [] After selecting Day I want users to be able to select  exercise.
 
 
  Do Now:
