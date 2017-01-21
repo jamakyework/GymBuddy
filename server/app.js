@@ -7,13 +7,13 @@ var passport = require('../strategies/userStrategy');
 //require routers
 var indexRouter = require('../routes/index');
 var registerRouter = require('../routes/register');
-var homeRouter = require('../routes/home');
-var XYZRouter = require('../routes/XYZRoute'); // test route
+// var XYZRouter = require('../routes/XYZRoute'); // test route
 var getStarted = require('../routes/getStarted');//new route
 var searchAPI = require('../routes/searchAPI'); //new route
 var workoutRouter = require('../routes/workoutRoute'); //new route
 var exerciseRouter = require('../routes/exerciseRoute'); //new route
 var selectWorkoutRouter = require('../routes/selectWorkoutRoute');//new route
+var viewExerciseRouter = require('../routes/viewExerciseRoute');//new route
 
 
 var app = express();
@@ -37,9 +37,7 @@ app.use(passport.session());
 // Routers
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
-app.use('/home', homeRouter);
-app.use('/getItem', XYZRouter); //test get route
-app.use('/addItem', XYZRouter); //test post route
+
 app.use('/getStarted', getStarted); //new router
 app.use('/searchAPI', searchAPI);//new router
 app.use('/workout', workoutRouter);//new router
@@ -47,7 +45,9 @@ app.use('/', workoutRouter); //workout post/get route
 app.use('/exercise', exerciseRouter);//new router
 app.use('/', exerciseRouter); //exercise/post/get route
 app.use('/selectWorkout', selectWorkoutRouter); //selectWorkout route
-
+app.use('/viewExercise', viewExerciseRouter); //new route
+// app.use('/getItem', XYZRouter); //test get route
+// app.use('/addItem', XYZRouter); //test post route
 
 // server port set and listen
 var serverPort = process.env.port || 8000;

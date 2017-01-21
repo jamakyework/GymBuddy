@@ -15,22 +15,35 @@
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
-        <form name="workouts">
-            <input type="radio" name="workout" value="createNewWorkout" ng-model="createNewWorkout"> Create New Workout
-            <br>
-            <input type="radio" name="workout" value="existingWorkout" ng-model="existingWorkout"> Select Existing Workout
-            <br>
-            <input type="radio" name="workout" value="searchForExercise" ng-model="searchForExercise"> Search For Exercise
-            <br>
-            <input type="radio" name="workout" value="addCustomExercise"ng-model="addCustomExercise"> Add Custom Exercise
-            <br>
-            <input type="radio" name="workout" value="editExistingWorkoutPlan" ng-model="editExistingWorkoutPlan"> Edit Existing Workout Plan
-            <br>
-            <input type="radio" name="workout" value="editExistingCustomExercise" ng-model="editExistingCustomExercise"> Edit Existing Custom Exercise
-        </form>
-        <button type="button" name="button" ng-click="submit"> Submit </button>
-        <button type="button" name="button" ng-click="home"> Home </button>
-    </div>
+        <div ng-controller="getStartedController">
+            <form name="getStarted">
+                <label>
+            <input type="radio" name="workout" value="createNewWorkout" ng-model="getStarted">
+            Create New Workout
+          </label><br>
+                <label>
+            <input type="radio" name="workout" value="viewExistingWorkout" ng-model="getStarted">
+            View Existing Workout
+          </label><br>
+                <label>
+            <input type="radio" name="workout" value="searchForExercise" ng-model="getStarted">
+            Search For Exercise
+          </label><br>
+                <label>
+            <input type="radio" name="workout" value="addCustomExercise"ng-model="getStarted">
+            Add Custom Exercise
+          </label><br>
+          <label>
+            <input type="radio" name="workout" value="viewExistingExercise" ng-model="getStarted">
+            View Existing Exercise
+          </label><br>
+            <!-- <label>
+              <input type="radio" name="workout" value="editExistingCustomExercise" ng-model="getStarted">
+            Edit Existing Custom Exercise
+          </label> -->
+            </form>
+            <button type="button" name="button" ng-click="submit()"> Submit </button>
+        </div>
 
 </body>
 

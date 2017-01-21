@@ -61,7 +61,7 @@ Attempt to connect to API
 Setup passport for user authentication
 01-19
 POC
-01-2
+01-20
 Style it up yo! Apply Style
 01-23
 MVP
@@ -99,8 +99,41 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 
 ##Steps completed
  * [x] featureBranch 1 - User Login and Authentication/User Database
- * [x] featureBranch 2 - Add/Create/View Workout  and Add/Create/View Exercise
- * [] featureBranch 3 - Create Factory to pass data
- * [] featureBranch 4 - Create Views
+ * [x] featureBranch 2 - Add/Create/View Workout and Add/Create/View Exercise
+ * [x] featureBranch 3 - Create Factory to pass data
+ * [x] featureBranch 4 - Create Views
  * [] featureBranch 5 - Connect to API
  * [] featureBranch 6 - Connect Views to logic
+
+
+
+ Story of Gym Buddy
+ On the most base level what should Gym Buddy Do:
+ [x] I want users to login.
+ [x] I want users to register.
+ [x] I want users to create workouts.
+ [x] I want users to create exercises.
+ [x] I want users to be able to view workouts.
+ [] I want users to be able to select workouts.
+ [] when select workout button clicked, should display only that workout that is clicked.
+ [] After selecting Day I want users to be able to select  exercise.
+ [] I want users to be able to add custom exercises to workout.
+ [] After selecting workout  I want users to be able to select days.
+ [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+
+
+ Do Now:
+ need page to view selected workout
+ Need button to add exercise to workout
+ (?logic)
+
+ Goals:
+ * Figure out how to Add Exercise to workout
+ * Button created, will attempt to create func that takes individual objects and adds to workout on click
+ * Sanitize API data (view without HTML tags)
+ * Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight)
+
+ Things I need help with:
+ * How to add exercises to workout (in mongo)
+ * How to connect logged in user to specific workouts (in mongo)
+ * How to display exercises from API in intelligible format (ng-sanitize?)

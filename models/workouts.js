@@ -6,6 +6,7 @@ var workoutSchema = new Schema({
   description: String,
   imageUrl:String,
   exercises: [] //execise array
+  // user:[]//need to attach logged in user
 });
 
 var workouts = mongoose.model('workouts', workoutSchema);

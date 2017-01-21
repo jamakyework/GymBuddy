@@ -5,30 +5,31 @@
     <meta charset="utf-8">
     <title>GymBuddy - Workout Planning Made Easy</title>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
-    <link href="./style/style.css" rel="stylesheet">
+    <link href="./style/login.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
 
 <body ng-app="myApp">
-  <div class="container">
-    <div class="jumbotron">
-    <h1>GymBuddy</h1>
-  </div>
-    <form ng-controller="mainController">
-        <div>
-            <label for="username">Username:</label>
-            <input ng-model="username" type="text" name="username" id="username" placeholder="username"/>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>GymBuddy</h1>
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input ng-model="password" type="password" name="password" id="password" placeholder="password"/>
-        </div>
-        <div>
-            <input ng-click="login()" type="submit" value="Log In" />
-            <a href="/register">Register</a>
-        </div>
-      </div>
+        <form class="form-signin" ng-controller="mainController">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <div>
+                <label for="username" class="sr-only">Username:</label>
+                <input ng-model="username" type="text" name="username" id="username" placeholder="username" class="form-control" />
+            </div>
+            <div>
+                <label for="password" class="sr-only">Password:</label>
+                <input ng-model="password" type="password" name="password" id="password" placeholder="password" class="form-control" />
+            </div>
+            <div>
+                <input ng-click="login()" type="submit" value="Log In" class="btn btn-lg btn-primary btn-block" />
+                <a href="/register">Register</a>
+            </div>
+    </div>
     </form>
     </div>
     </div>

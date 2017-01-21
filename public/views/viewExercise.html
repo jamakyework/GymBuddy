@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>GymBuddy - Workout Planning Made Easy</title>
+    <link href="./vendors/bootstrap.min.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="./scripts/client.js" charset="utf-8"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>GymBuddy</h1>
+        </div>
+        <div ng-controller="viewExerciseController">
+            <button type="button" name="button" ng-click="viewExerciseFunc()">View Existing Exercises</button>
+            <div ng-repeat='exercise in exercises'>
+                Name: {{exercise.name}}
+                <br> Description: {{exercise.description}}
+                <br> Image: <img ng-src="{{exercise.imageUrl}}">
+                <br>
+                <!-- <button type="button" name="button" ng-click="addtoWorkout()"> Add to workout</button> -->
+                <!-- select workout should add particular exercise to selected workout -->
+            </div>
+            <button type="button" name="button" ng-click="home()"> Home </button>
+        </div>
+    </div>
+</body>
+
+</html>
