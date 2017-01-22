@@ -16,57 +16,31 @@
             <h1>GymBuddy</h1>
         </div>
         <div ng-controller="getStartedController">
-          <input type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout"  ng-click="createWorkout()">
-              <br>
-          <input type="button" name="viewWorkout"value="View Workout" ng-model="getStarted"  ng-click="viewWorkout()">
-                  <br>
-
-          <input type="button" name="createExercise"value="Create Exercise"ng-model="createExercise" ng-click="createExercise()">
-
-              <br>
-
-          <input type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()">
-
-              <br>
-
-    <input type="button" name="searchForExercise"value="Search For Exercise" ng-model="searchForExercise"  ng-click="searchForExercise()">
+            <input type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()">
+            <!-- <br> -->
+            <input type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()">
+            <!-- <br> -->
+            <input type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()">
+            <!-- <br> -->
+            <input type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()">
+            <!-- <br> -->
+            <input type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()">
 
 
+            <div ng-repeat='workout in workouts'>
+                <img ng-src="{{workout.imageUrl}}">
+                <br> {{workout.name}}
+                <br> {{workout.description}}
+                <br> <button type="button" name="button" ng-click="selectWorkout()">Select</button>
+                <!-- <button type="button" name="button" ng-click="setActive($index)">Select</button> -->
+            </div>
 
-              <!-- <form name="getStarted">
-                  <label>
-              <input type="radio" name="workout" value="createWorkout" ng-model="getStarted">
-              Create Workout
-            </label>
-                  <br>
-                  <label>
-              <input type="radio" name="workout" value="viewWorkout" ng-model="getStarted">
-              View Workout
-            </label>
-                  <br>
-                  <label>
-              <input type="radio" name="workout" value="createExercise"ng-model="getStarted">
-            Create Exercise
-            </label>
-                  <br>
-                  <label>
-              <input type="radio" name="workout" value="viewExercise" ng-model="getStarted">
-              View Exercise
-            </label>
-                  <br>
-                  <label>
-        <input type="radio" name="workout" value="searchForExercise" ng-model="getStarted">
-        Search For Exercise
-      </label>
-                  <label>
-                <input type="radio" name="workout" value="editExistingCustomExercise" ng-model="getStarted">
-              Edit Existing Custom Exercise
-            </label>
-              </form>
-              <button type="button" name="button" ng-click="submit()"> Submit </button>
-              <br>
-              <button type="button" name="button" ng-click="logout()"> Log Out</button>
-          </div> -->
+            <div ng-repeat='exercise in exercises'>
+                <img ng-src="{{exercise.imageUrl}}">
+                <br> {{exercise.name}}
+                <br> {{exercise.description}}
+                <br> <button type="button" name="button" ng-click="selectExercise()"> Add to workout</button>
+            </div>
 
 </body>
 
