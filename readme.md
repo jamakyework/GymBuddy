@@ -143,3 +143,5 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  * How to add exercises to workout (in mongo)
  * How to connect logged in user to specific workouts (in mongo)
  * How to display exercises from API in intelligible format (ng-sanitize?)
+
+ from select in view existing workouts might be able to incorporate ng route to get into workout and add exercises to workouts
