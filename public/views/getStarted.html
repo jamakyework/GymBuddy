@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
@@ -15,6 +15,7 @@
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
+
         <div ng-controller="getStartedController">
             <input type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()">
             <!-- <br> -->
@@ -26,20 +27,20 @@
             <!-- <br> -->
             <input type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()">
 
-
-            <div ng-repeat='workout in workouts'>
+            <div  ng-repeat='workout in workouts' >
                 <img ng-src="{{workout.imageUrl}}">
                 <br> {{workout.name}}
                 <br> {{workout.description}}
-                <br> <button type="button" name="button" ng-click="selectWorkout()">Select</button>
-                <!-- <button type="button" name="button" ng-click="setActive($index)">Select</button> -->
+                <br> <button type="button" name="button" ng-click="setActive($index)" > Select </button>
+                <!-- <button type="button" name="button" index="{{$index}}" ng-model="index" ng-click=selectWorkout()> Select </button> -->
             </div>
 
             <div ng-repeat='exercise in exercises'>
                 <img ng-src="{{exercise.imageUrl}}">
                 <br> {{exercise.name}}
                 <br> {{exercise.description}}
-                <br> <button type="button" name="button" ng-click="selectExercise()"> Add to workout</button>
+                <br> <button type="button" name="button" ng-click="selectExercise()"> Select </button>
+
             </div>
 
 </body>

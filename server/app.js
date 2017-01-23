@@ -12,7 +12,7 @@ var getStarted = require('../routes/getStarted');//new route
 var searchAPI = require('../routes/searchAPI'); //new route
 var workoutRouter = require('../routes/workoutRoute'); //new route
 var exerciseRouter = require('../routes/exerciseRoute'); //new route
-var selectWorkoutRouter = require('../routes/selectWorkoutRoute');//new route
+var viewWorkoutRouter = require('../routes/viewWorkoutRoute');//new route
 var viewExerciseRouter = require('../routes/viewExerciseRoute');//new route
 
 
@@ -44,7 +44,7 @@ app.use('/workout', workoutRouter);//new router
 app.use('/', workoutRouter); //workout post/get route
 app.use('/exercise', exerciseRouter);//new router
 app.use('/', exerciseRouter); //exercise/post/get route
-app.use('/selectWorkout', selectWorkoutRouter); //selectWorkout route
+app.use('/viewWorkout', viewWorkoutRouter); //selectWorkout route
 app.use('/viewExercise', viewExerciseRouter); //new route
 // app.use('/getItem', XYZRouter); //test get route
 // app.use('/addItem', XYZRouter); //test post route

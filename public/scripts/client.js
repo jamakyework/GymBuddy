@@ -1,10 +1,11 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', [ ]);
 console.log("NG");
 
 
 myApp.factory('workoutFactory', function() {
     var workoutFactory = {};
     workoutFactory.workouts = [];
+    workoutFactory.activeWorkout = {};
     // workoutFactory.users = [];
     workoutFactory.addWorkout = function(newWorkout) {
         this.workouts.push(newWorkout);
@@ -72,15 +73,20 @@ myApp.controller('registerController', ['$scope', '$http', '$window',
 ]);
 
 
-myApp.controller('getStartedController', ['$scope', '$http', '$window',
-    function($scope, $http, $window) {
+myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workoutFactory',
+    function($scope, $http, $window, $workoutFactory) {
         console.log('in getStartedController');
 
         $scope.createWorkout = function() {
             $window.location.href = '/workout';
         };
 
+        $scope.createExercise = function() {
+            $window.location.href = '/exercise';
+        };
+
         $scope.viewWorkout = function() {
+          // $window.location.reload();
             $scope.workouts = [];
             $http({
                 method: 'GET',
@@ -89,45 +95,55 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window',
                 console.log("response:", response);
                 $scope.workouts = response.data;
                 console.log("$scope.workouts:", $scope.workouts);
-                $scope.selectWorkout = function() {
-                    console.log('this.workout:', this.workout);
+                //dynamic select btn for each workout
+                //on click needs to take user to the specific workout page
+                //need page that will be updated with this when this is clicked
+                //stub page that will simply be populated with info depending on what is clicked
+                // var i = $scope.index;
+                // console.log("i:", i);
+                // console.log("$scope.workouts[i]:", $scope.workouts[i]);
+                $scope.setActive = function(index) {
+                  console.log('this.workout:', this.workout);
+                // $window.location.href = '/viewWorkout';
+                  workoutFactory.activeWorkout = $scope.workouts[index];
+                };
+                // $scope.selectWorkout = function() {
+                // console.log('this.workout:', this.workout);
+                // $window.location.href = '/viewWorkout';
+                // };
+
+            }, function errorCallback(error) {
+                console.log('error', error);
+            });
+        };
+
+        // var selected = $scope.getStarted;
+        // //     console.log('selected:', selected);
+
+        $scope.viewExercise = function() {
+            $scope.exercises = [];
+            $http({
+                method: 'GET',
+                url: '/getExercise',
+            }).then(function successCallback(response) {
+                console.log("response:", response);
+                $scope.exercises = response.data;
+                console.log("$scope.exercises:", $scope.exercises);
+                // $window.location.reload();
+                $scope.selectExercise = function() {
+                    console.log('this.exercise:', this.exercise);
+                    $window.location.href = '/viewExercise';
                 };
             }, function errorCallback(error) {
                 console.log('error', error);
             });
         };
 
-        $scope.createExercise = function() {
-            $window.location.href = '/exercise';
-        };
-
-        $scope.viewExercise = function() {
-            // $window.location.href = '/viewExercise';
-            $scope.exercises = [];
-                $http({
-                    method: 'GET',
-                    url: '/getExercise',
-                }).then(function successCallback(response) {
-                    console.log("response:", response);
-                    $scope.exercises = response.data;
-                    console.log("$scope.exercises:", $scope.exercises);
-                    $scope.selectExercise = function() {
-                        console.log('this.exercise:', this.exercise);
-                    };
-                }, function errorCallback(error) {
-                    console.log('error', error);
-                });
-        };
-
         $scope.searchForExercise = function() {
             $window.location.href = '/searchAPI';
         };
 
-        // $scope.selectWorkoutFunc = function() {
-        //     console.log('this.workout:', this.workout);
-        //
-        // };
-
+        //function for submit button to change page from radio buttons
         // $scope.submit = function() {
         //     var selected = $scope.getStarted;
         //     console.log('selected:', selected);
@@ -145,6 +161,7 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window',
         //     }
         // };
 
+        //future logout button
         // $scope.logout = function() {
         //   $http({
         //       method: 'GET',
@@ -155,9 +172,8 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window',
         //       console.log('error', error);
         //   });
         // };
-
-
-    }]);//end getStartedController
+    }
+]); //end getStartedController
 
 
 myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'workoutFactory',
@@ -213,17 +229,12 @@ myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
                 console.log('error', error);
             });
         };
-        //need selectWorkoutFunc to take user to the specific workout page
-        //need page that will be updated with this when this is clicked
-        //stub page that will simply be populated with info depending on what is clicked
         $scope.selectWorkoutFunc = function() {
             console.log('this.workout:', this.workout);
 
         };
 
-        // $scope.setActive = function(index) {
-        //   factory.activeWorkout = $scope.workouts[index];
-        // };
+
         // $scope.selectWorkoutFunc = function() {
         // //add selected workout to scope.workouts
         // };

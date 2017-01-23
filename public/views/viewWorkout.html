@@ -11,12 +11,15 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
+    <!-- <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css"> -->
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
+
+
 </head>
 
 <body ng-app="myApp">
@@ -27,16 +30,25 @@
         <!-- (get selected workout from button clicked on previous page) -->
         <!-- (how to on page load, load existing workouts without needing to click view) -->
         <div ng-controller="viewWorkoutController">
-            <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
+            <!-- <script src="/node_modules/angular/angular.js"></script>
+            <script src="/node_modules/angular-aria/angular-aria.js"></script>
+            <script src="/node_modules/angular-animate/angular-animate.js"></script>
+            <script src="/node_modules/angular-material/angular-material.js"></script> -->
+            <h1> View Workout XYZ </h1>
+            <p> Workout Image </p>
+
+            <p> This page should display the specific workout that was selected in a tab that would enable user to select day view and exercise for day </p>
+            <!-- <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
             <div ng-repeat='workout in workouts'>
                 Name: {{workout.name}}
                 <br> Description: {{workout.description}}
                 <br> Image: <img ng-src="{{workout.imageUrl}}">
                 <button type="button" name="button" ng-click="selectWorkoutFunc()">Select</button>
-                <!-- <button type="button" name="button" ng-click="$scope.workoutClick">Select</button> -->
-                <!-- <button type="button" name="button" ng-click="setActive($index)">Select</button> -->
-            </div>
-          <button type="button" name="button" ng-click="home()"> Home </button>
+                <button type="button" name="button" ng-click="$scope.workoutClick">Select</button>
+                <button type="button" name="button" ng-click="setActive($index)">Select</button>
+            </div> -->
+
+            <button type="button" name="button" ng-click="home()"> Home </button>
         </div>
     </div>
 </body>
