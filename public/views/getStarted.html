@@ -11,12 +11,11 @@
 </head>
 
 <body ng-app="myApp">
+    <div ng-controller="getStartedController">
     <div class="container">
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
-
-        <div ng-controller="getStartedController">
             <input type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()">
             <!-- <br> -->
             <input type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()">
@@ -27,22 +26,18 @@
             <!-- <br> -->
             <input type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()">
 
-            <div  ng-repeat='workout in workouts' >
+            <div ng-repeat='workout in workouts' >
                 <img ng-src="{{workout.imageUrl}}">
                 <br> {{workout.name}}
                 <br> {{workout.description}}
                 <br> <button type="button" name="button" ng-click="setActive($index)" > Select </button>
-                <!-- <button type="button" name="button" index="{{$index}}" ng-model="index" ng-click=selectWorkout()> Select </button> -->
             </div>
-
             <div ng-repeat='exercise in exercises'>
                 <img ng-src="{{exercise.imageUrl}}">
                 <br> {{exercise.name}}
                 <br> {{exercise.description}}
                 <br> <button type="button" name="button" ng-click="selectExercise()"> Select </button>
-
             </div>
-
+        </div>
 </body>
-
 </html>

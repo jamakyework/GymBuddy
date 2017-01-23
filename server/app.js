@@ -37,15 +37,19 @@ app.use(passport.session());
 // Routers
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
-
-app.use('/getStarted', getStarted); //new router
 app.use('/searchAPI', searchAPI);//new router
-app.use('/workout', workoutRouter);//new router
+app.use('/getStarted', getStarted); //new router
+
+
 app.use('/', workoutRouter); //workout post/get route
-app.use('/exercise', exerciseRouter);//new router
-app.use('/', exerciseRouter); //exercise/post/get route
+app.use('/workout', workoutRouter);//new router
 app.use('/viewWorkout', viewWorkoutRouter); //selectWorkout route
+
+app.use('/', exerciseRouter); //exercise/post/get route
+app.use('/exercise', exerciseRouter);//new router
 app.use('/viewExercise', viewExerciseRouter); //new route
+
+
 // app.use('/getItem', XYZRouter); //test get route
 // app.use('/addItem', XYZRouter); //test post route
 

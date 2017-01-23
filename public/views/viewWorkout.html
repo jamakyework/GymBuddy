@@ -1,12 +1,3 @@
-<!-- clicking select  under workout would bring you to this page -->
-<!-- on this page would be be the specific workout -->
-<!-- example workout X -->
-<!-- Description -->
-<!-- Image -->
-<!-- list of exercises in workout -->
-<!-- or -->
-<!-- button to add exercise to workout -->
-
 <!DOCTYPE html>
 <html>
 
@@ -23,34 +14,30 @@
 </head>
 
 <body ng-app="myApp">
+    <div ng-controller="viewWorkoutController">
     <div class="container">
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
-        <!-- (get selected workout from button clicked on previous page) -->
-        <!-- (how to on page load, load existing workouts without needing to click view) -->
-        <div ng-controller="viewWorkoutController">
             <!-- <script src="/node_modules/angular/angular.js"></script>
             <script src="/node_modules/angular-aria/angular-aria.js"></script>
             <script src="/node_modules/angular-animate/angular-animate.js"></script>
             <script src="/node_modules/angular-material/angular-material.js"></script> -->
             <h1> View Workout XYZ </h1>
             <p> Workout Image </p>
-
             <p> This page should display the specific workout that was selected in a tab that would enable user to select day view and exercise for day </p>
-            <!-- <button type="button" name="button" ng-click="viewWorkoutFunc()">View Existing Workouts</button>
-            <div ng-repeat='workout in workouts'>
-                Name: {{workout.name}}
-                <br> Description: {{workout.description}}
-                <br> Image: <img ng-src="{{workout.imageUrl}}">
-                <button type="button" name="button" ng-click="selectWorkoutFunc()">Select</button>
-                <button type="button" name="button" ng-click="$scope.workoutClick">Select</button>
-                <button type="button" name="button" ng-click="setActive($index)">Select</button>
-            </div> -->
-
+            <!-- clicking select  under workout would bring you to this page -->
+            <!-- on this page would be be the specific workout -->
+            <!-- example workout X -->
+            <!-- Description -->
+            <!-- Image -->
+            <!-- list of exercises in workout -->
+            <!-- or -->
+            <!-- button to add exercise to workout -->
+            <!-- (get selected workout from button clicked on previous page) -->
+            <!-- (how to on page load, load existing workouts without needing to click view) -->
             <button type="button" name="button" ng-click="home()"> Home </button>
         </div>
     </div>
 </body>
-
 </html>

@@ -11,11 +11,12 @@
 </head>
 
 <body ng-app="myApp">
+    <div ng-controller="indexController">
     <div class="container">
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
-        <form class="form-signin" ng-controller="mainController">
+        <form class="form-signin">
             <h2 class="form-signin-heading">Please sign in</h2>
             <div>
                 <label for="username" class="sr-only">Username:</label>
@@ -29,10 +30,8 @@
                 <input ng-click="login()" type="submit" value="Log In" class="btn btn-lg btn-primary btn-block" />
                 <a href="/register">Don't have an account? Click here</a>
             </div>
-    </div>
     </form>
-    </div>
+        </div>
     </div>
 </body>
-
 </html>

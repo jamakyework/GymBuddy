@@ -10,13 +10,14 @@
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="myApp" >
+  <div ng-controller="registerController">
     <div class="container">
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
         <h1>Register</h1>
-        <form ng-controller="registerController">
+        <form>
             <div>
                 <label for="username">Username:</label>
                 <input ng-model="username" type="text" name="username" id="username" />
@@ -32,5 +33,4 @@
         </form>
     </div>
 </body>
-
 </html>

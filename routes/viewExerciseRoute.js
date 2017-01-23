@@ -4,8 +4,8 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
     console.log('view Exercise html');
-var viewExercise = path.join(__dirname, '../public/views/viewExercise.html');
-    res.sendFile(viewExercise);
+var selectExercise = path.join(__dirname, '../public/views/viewExercise.html');
+    res.sendFile(selectExercise);
 });
 
 module.exports = router;

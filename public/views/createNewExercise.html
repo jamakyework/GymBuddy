@@ -12,11 +12,11 @@
 </head>
 
 <body ng-app="myApp">
+  <div ng-controller="createExerciseController">
     <div class="container">
         <div class="jumbotron">
             <h1>GymBuddy</h1>
         </div>
-        <div ng-controller="createExerciseController">
             <h1> New Exercise </h1>
             <form>
                 Name: <input type="text" name="name" ng-model="name">
@@ -30,7 +30,6 @@
                 <!-- <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button> -->
             </form>
         </div>
-
+      </div>
 </body>
-
 </html>
