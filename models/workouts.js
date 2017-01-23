@@ -2,10 +2,11 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var workoutSchema = new Schema({
+  username: String,
   name: String,
   description: String,
   imageUrl:String,
-  exercises: [] //execise array
+  exercise: [] //exercise array
   // user:[]//need to attach logged in user
 });
 

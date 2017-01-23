@@ -3,8 +3,8 @@ var path = require('path');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  var crudPath = path.join(__dirname, '../public/views/getStarted.html');
-  res.sendFile(crudPath);
+  var getStarted = path.join(__dirname, '../public/views/getStarted.html');
+  res.sendFile(getStarted);
 });
 
 module.exports = router;

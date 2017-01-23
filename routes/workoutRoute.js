@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var router = express.Router();
+var passport = require('passport');
 var workoutImport = require('../models/workouts.js');
 
 router.get('/', function(req, res) {
@@ -20,7 +21,10 @@ router.get('/getWorkout', function(req, res) {
 router.post('/addWorkout', function(req, res) {
     console.log('workout post hit');
     console.log('req.body:', req.body);
+    // console.log('req:', req);
+    // console.log('username:', newWorkout.user);
     var newWorkout = workoutImport(req.body);
+    // newWorkout.user = req.user.username;
     newWorkout.save();
     res.status(200).send('post sent');
 });
