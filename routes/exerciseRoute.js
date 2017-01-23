@@ -3,10 +3,17 @@ var path = require('path');
 var router = express.Router();
 var exerciseImport = require('../models/exercises.js');
 
-router.get('/', function(req, res) {
+router.get('/exercise', function(req, res) {
     console.log('exercise get html');
 var exercisePath = path.join(__dirname, '../public/views/createNewExercise.html');
     res.sendFile(exercisePath);
+});
+
+
+router.get('/viewExercise', function(req, res) {
+    console.log('view Exercise html');
+var selectExercise = path.join(__dirname, '../public/views/viewExercise.html');
+    res.sendFile(selectExercise);
 });
 
 router.get('/getExercise', function(req, res) {

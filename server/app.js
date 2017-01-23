@@ -3,20 +3,16 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('../strategies/userStrategy');
+var app = express();
 
 //require routers
 var indexRouter = require('../routes/index');
 var registerRouter = require('../routes/register');
-// var XYZRouter = require('../routes/XYZRoute'); // test route
 var getStarted = require('../routes/getStarted');//new route
-var searchAPI = require('../routes/searchAPI'); //new route
 var workoutRouter = require('../routes/workoutRoute'); //new route
 var exerciseRouter = require('../routes/exerciseRoute'); //new route
-var viewWorkoutRouter = require('../routes/viewWorkoutRoute');//new route
-var viewExerciseRouter = require('../routes/viewExerciseRoute');//new route
-
-
-var app = express();
+var searchAPI = require('../routes/searchAPI'); //new route
+// var XYZRouter = require('../routes/XYZRoute'); // test route
 
 // middleware
 app.use(bodyParser.json());
@@ -37,18 +33,10 @@ app.use(passport.session());
 // Routers
 app.use('/', indexRouter);
 app.use('/register', registerRouter);
-app.use('/searchAPI', searchAPI);//new router
-app.use('/getStarted', getStarted); //new router
-
-
-app.use('/', workoutRouter); //workout post/get route
-app.use('/workout', workoutRouter);//new router
-app.use('/viewWorkout', viewWorkoutRouter); //selectWorkout route
-
-app.use('/', exerciseRouter); //exercise/post/get route
-app.use('/exercise', exerciseRouter);//new router
-app.use('/viewExercise', viewExerciseRouter); //new route
-
+app.use('/', getStarted); //new router
+app.use('/', workoutRouter);
+app.use('/', exerciseRouter);
+app.use('/', searchAPI);//new router
 
 // app.use('/getItem', XYZRouter); //test get route
 // app.use('/addItem', XYZRouter); //test post route

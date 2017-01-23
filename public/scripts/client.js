@@ -208,12 +208,33 @@ myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
         console.log('viewWorkoutController, selected workout id:', sessionStorage.getItem( 'selectedWorkoutId' ) );
         // run a find for this workout
+        $scope.home = function() {
+            $window.location.href = '/getStarted';
+            };
+
+            $scope.selectedWorkout = function() {
+                $scope.workouts = [];
+                $http({
+                    method: 'GET',
+                    url: '/getWorkout/' + sessionStorage.getItem( 'selectedWorkoutId' ),
+                }).then(function successCallback(response) {
+                    console.log("response:", response);
+                    $scope.workouts = response.data;
+                    console.log("$scope.workouts:", $scope.workouts);
+                  });
+                    function errorCallback(error) {
+                    console.log('error', error);
+                }
+            };
     }
 ]);
 
 
 myApp.controller('viewExerciseController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
+      $scope.home = function() {
+          $window.location.href = '/getStarted';
+      };
     }
 ]);
 
