@@ -2,8 +2,10 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
+    <link rel="icon" type="image/gif" href="./images/favicon.png" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
@@ -12,32 +14,35 @@
 
 <body ng-app="myApp">
     <div ng-controller="getStartedController">
-    <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container">
             <h1>GymBuddy</h1>
+            </div>
+            </div>
+        <div>
+            <label for="Create Workout"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()"/>
+            <label for="Create Exercise"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()"/>
+            <label for="View Workout"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()"/>
+            <label for="View Exercise"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
+            <label for="Search For Exercise"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()"/>
         </div>
-            <input type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()">
-            <!-- <br> -->
-            <input type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()">
-            <!-- <br> -->
-            <input type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()">
-            <!-- <br> -->
-            <input type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()">
-            <!-- <br> -->
-            <input type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()">
-
             <div ng-repeat='workout in workouts' >
-                <img ng-src="{{workout.imageUrl}}">
-                <br> {{workout.name}}
-                <br> {{workout.description}}
-                <br> <button type="button" name="button" ng-click="setActive($index)" > Select </button>
+                <img ng-src="{{workout.imageUrl}}"/>
+                {{workout.name}}
+                {{workout.description}}
+                <input  class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActive($index)" value="Select"/>
             </div>
             <div ng-repeat='exercise in exercises'>
-                <img ng-src="{{exercise.imageUrl}}">
-                <br> {{exercise.name}}
-                <br> {{exercise.description}}
-                <br> <button type="button" name="button" ng-click="selectExercise()"> Select </button>
+                <img ng-src="{{exercise.imageUrl}}"/>
+                {{exercise.name}}
+                {{exercise.description}}
+                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="selectExercise()" value="Select"/>
             </div>
-        </div>
+            </div>
 </body>
 </html>

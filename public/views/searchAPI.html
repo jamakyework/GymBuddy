@@ -2,8 +2,10 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
+    <link rel="icon" type="image/gif" href="./images/favicon.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
@@ -12,21 +14,20 @@
 
 <body ng-app="myApp">
 <div ng-controller="searchExerciseController">
+  <div class="jumbotron jumbotron-fluid text-center">
     <div class="container">
-        <div class="jumbotron">
-            <h1>GymBuddy</h1>
-        </div>
-        <input type="text" name="" value="" placeholder="Search Exercise" ng-model="searchExercise">
-        <button type="button" name="button" ng-click="searchExerciseFunc()">Search</button>
-
+      <h1>GymBuddy</h1>
+    </div>
+  </div>
+        <label for="Search Exercise"></label>
+        <input type="text" name="searchExercise" class="form-control" placeholder="Search Exercise" ng-model="searchExercise"/>
+        <input class="btn btn-primary navbar-btn" type='button' name='search' value='Search'  ng-click='searchExerciseFunc()'/>
         <div ng-repeat="exercise in exercises|filter:searchExercise">
             <div> Exercise Name: {{exercise.name}} </div>
             <div> Exercise Description: {{exercise.description}} </div>
-            <button type="button" name="button" ng-click="addtoWorkout()"> Add to workout</button>
+            <input class="btn btn-primary navbar-btn" type="button" name="button" ng-click="addtoWorkout()" value="Select"/>
         </div>
-        <br>
-        <button type="button" name="button" ng-click="home()"> Home </button>
+        <input class="btn btn-danger navbar-btn" type="button" name="button" value="Home" ng-click="home()"/>
     </div>
-  </div>
 </body>
 </html>

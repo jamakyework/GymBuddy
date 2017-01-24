@@ -2,36 +2,38 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
+    <link rel="icon" type="image/gif" href="./images/favicon.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
-    <link href="./style/login.css" rel="stylesheet">
+    <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
 
 <body ng-app="myApp">
     <div ng-controller="indexController">
-    <div class="container">
-        <div class="jumbotron">
-            <h1>GymBuddy</h1>
-        </div>
+      <div class="jumbotron jumbotron-fluid text-center">
+          <div class="container">
+          <h1>GymBuddy</h1>
+          </div>
+          </div>
         <form class="form-signin">
-            <h2 class="form-signin-heading">Please sign in</h2>
+            <h2 class="form-signin-heading">Please Login</h2>
             <div>
                 <label for="username" class="sr-only">Username:</label>
-                <input ng-model="username" type="text" name="username" id="username" placeholder="username" class="form-control" />
+                <input class="form-control" ng-model="username" type="text" name="username" id="username" placeholder="username"/>
             </div>
             <div>
                 <label for="password" class="sr-only">Password:</label>
-                <input ng-model="password" type="password" name="password" id="password" placeholder="password" class="form-control" />
+                <input class="form-control" ng-model="password" type="password" name="password" id="password" placeholder="password"/>
             </div>
             <div>
-                <input ng-click="login()" type="submit" value="Log In" class="btn btn-lg btn-primary btn-block" />
-                <a href="/register">Don't have an account? Click here</a>
+                <input class="btn btn-lg btn-primary btn-block" ng-click="login()" type="submit" value="Login"/>
+                <a href="/register" class="text-danger">Don't have an account? Click here</a>
             </div>
     </form>
-        </div>
     </div>
 </body>
 </html>

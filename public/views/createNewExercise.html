@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-    <meta name="viewport" content="width=360, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy - Create New Exercise</title>
+    <link rel="icon" type="image/gif" href="./images/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
-
 <body ng-app="myApp">
   <div ng-controller="createExerciseController">
-    <div class="container">
-        <div class="jumbotron">
-            <h1>GymBuddy</h1>
-        </div>
-            <h1> New Exercise </h1>
-            <form>
-                Name: <input type="text" name="name" ng-model="name">
-                <br> Description: <textarea name="description" ng-model="description"> </textarea>
-                <br> Enter ImageUrl: <input type="text" name="" value="" ng-model="imageUrl">
-                <br>
-                <button type="button" name="button" ng-click="addExercise()"> Submit </button>
-                <br>
-                <button type="button" name="button" ng-click="home()"> Home </button>
-                <br>
-                <!-- <button type="button" name="button" ng-click="go('/getStarted')">Get Started</button> -->
+    <div class="jumbotron jumbotron-fluid text-center">
+      <div class="container">
+        <h1>GymBuddy</h1>
+      </div>
+    </div>
+    <div>
+            <h1>New Exercise</h1>
+            <form class="form-group">
+              <label for="name"></label>
+              <input placeholder="Name" class="form-control" type="text" name="name" ng-model="name"/>
+              <label for="description"></label>
+                 <textarea placeholder="Description" class="form-control" name="description" ng-model="description" class="form-control" rows="5" id="description">
+               </textarea>
+                 <label for="imageUrl"></label>
+                 <input placeholder="Enter ImageUrl" class="form-control" type="text" name="" value="" ng-model="imageUrl"/>
+                <input type="button" class="btn btn-danger navbar-btn" ng-click="addExercise()" value="Submit"/>
+                <input type="button" class="btn btn-primary navbar-btn" ng-click="home()" value="Home"/>
             </form>
         </div>
       </div>
