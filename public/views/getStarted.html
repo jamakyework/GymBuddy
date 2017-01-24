@@ -18,16 +18,14 @@
     <div ng-controller="getStartedController">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
-            <h1>GymBuddy</h1>
+            <h1 class="tron-text">GymBuddy</h1>
             </div>
             </div>
-        <div>
+        <div class="container-fluid">
             <label for="Create Workout"></label>
             <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()"/>
-
             <label for="Create Exercise"></label>
             <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()"/>
-
             <label for="View Workout"></label>
             <input data-toggle="modal" data-target="#workoutModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()"/>
             <div id="workoutModal" class="modal fade" role="dialog">
@@ -51,7 +49,6 @@
                     </div>
                   </div>
                 </div>
-
             <label for="View Exercise"></label>
             <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
             <div id="exerciseModal" class="modal fade" role="dialog">
@@ -75,16 +72,9 @@
                     </div>
                   </div>
                 </div>
-
-
             <label for="Search For Exercise"></label>
             <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()"/>
         </div>
-
-
-
-
-
             </div>
 </body>
 </html>

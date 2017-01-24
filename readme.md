@@ -119,7 +119,7 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 * [x] I want users to create exercises.
 * [x] I want users to be able to view workouts.
 * [x] I want users to be able to view exercises.
-* [x] I want click to view/exercises and display in modal window or ng route
+* [x] I want click to view/exercises and display in modal window
 
 Goals:
 ------
@@ -134,6 +134,7 @@ Do Now:
 --------
 connect login
 select workout opens workout
+user is able to add exercise to workout
 style, style, style,
 
 

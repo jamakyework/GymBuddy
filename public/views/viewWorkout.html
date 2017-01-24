@@ -4,10 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
     <link rel="icon" type="image/gif" href="./images/favicon.png" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
-    <!-- <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css"> -->
-    <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+    <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
@@ -15,13 +14,10 @@
     <div ng-controller="viewWorkoutController" ng-init="selectedWorkout()">
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1>GymBuddy</h1>
+          <h1 class="tron-text">GymBuddy</h1>
         </div>
       </div>
-            <!-- <script src="/node_modules/angular/angular.js"></script>
-            <script src="/node_modules/angular-aria/angular-aria.js"></script>
-            <script src="/node_modules/angular-animate/angular-animate.js"></script>
-            <script src="/node_modules/angular-material/angular-material.js"></script> -->
+
             <!-- clicking select  under workout would bring you to this page -->
             <!-- on this page would be be the specific workout -->
             <!-- example workout X -->
@@ -32,12 +28,15 @@
             <!-- button to add exercise to workout -->
             <!-- (get selected workout from button clicked on previous page) -->
             <!-- (how to on page load, load existing workouts without needing to click view) -->
+            <!-- ng intit? -->
+            <div class="container-fluid">
             <h1> View Workout XYZ </h1>
             <p> Workout Image </p>
             <p> This page should display the specific workout that was selected in
               a tab that would enable user to select day view and exercise for day using "selected
               workout id:" </p>
             <input class="btn btn-danger navbar-btn" type="button" name="button" ng-click="home()" value="Home"/>
-    </div>
+          </div>
+          </div>
 </body>
 </html>
