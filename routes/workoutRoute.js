@@ -35,14 +35,13 @@ router.get('/getWorkout/:id', function(req, res) {
 router.post('/addWorkout', function(req, res) {
     console.log('workout post hit');
     console.log('req.body:', req.body);
-    // console.log('req:', req);
     console.log('username:', req.user);
     var newWorkout = workoutImport(req.body);
-    // newWorkout.user = req.user.username;
+    newWorkout.user = req.user.username;
     newWorkout.save();
     res.status(200).send('post sent');
 });
 
 module.exports = router;
 
-//if req.isAuthenticated() then x otherwise send 401, on client side if req.authenticated(send back 200)
+//if req.isAuthenticated() on the get then x otherwise send 401, on client side if req.authenticated(send back 200)

@@ -96,6 +96,7 @@ Password recovery option; help users recover account if password is lost
 Delete account option; option for users to delete account if they no longer want to use application
 Option to check off exercise when completed for the day
 Monthly email report/summary of workouts indicating days worked out and exercises completed
+---------------------------------------------------------------------------------------------------------------------
 
 ##Steps completed
  * [x] featureBranch 1 - User Login and Authentication/User Database
@@ -107,41 +108,52 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  * [] featureBranch 7 - users to be able to select workouts (when select workout button clicked, should display
                         only the workout that is clicked)
 
-
  Story of Gym Buddy
- ------------------
+
+ Completed:
+ ---------
  On the most base level what should Gym Buddy Do:
- [x] I want users to login.
- [x] I want users to register.
- [] I want users workouts to be unique to logged in user.
- [x] I want users to create workouts.
- [x] I want users to create exercises.
- [x] I want users to be able to view workouts.
- [x] I want users to be able to view exercises.
- [] I want users to be able to select workouts (when select workout button clicked, should display only the workout that is clicked)
- [] I want users to be able to add exercises to selected workout.
- [] I want users to be able to view exercises in specific workout.
+* [x] I want users to login.
+* [x] I want users to register.
+* [x] I want users to create workouts.
+* [x] I want users to create exercises.
+* [x] I want users to be able to view workouts.
+* [x] I want users to be able to view exercises.
+* [x] I want click to view/exercises and display in modal window or ng route
+
+Goals:
+------
+* [1] I want users workouts to be unique to logged in user.
+* [2] I want users to be able to select workouts
+* [3] I want users to be able to add exercises to selected workout.
+* [4] I want users to be able to view exercises in specific workout.
+* [5] Sanitize API data (view without HTML tags)
+
+
+Do Now:
+--------
+connect login
+select workout opens workout
+style, style, style,
+
+
+To Do:
+------
+* [1] Connect login to workout and exercise in DB
+* [2] when select workout button clicked, should display only the workout that is clicked
+* [3] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
+     objects and adds to workout on click)
+* [4] Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
+
+
+Things I need help with:
+------------------------
+  * How to connect logged in user to specific workouts (in mongo)
+  * How to display exercises from API in intelligible format (ng-sanitize?)
+  * How to add exercises to workout (in mongo)
 
  Vers 2.0
  --------
- [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
-  [] After selecting workout  I want users to be able to select days.
- [] After selecting Day I want users to be able to select  exercise.
-
-
- Do Now:
- Need button to add exercise to workout
- (?logic)
-
- Goals:
- * Figure out how to Add Exercise to workout
- * Button created, will attempt to create func that takes individual objects and adds to workout on click
- * Sanitize API data (view without HTML tags)
- * Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight)
-
- Things I need help with:
- * How to add exercises to workout (in mongo)
- * How to connect logged in user to specific workouts (in mongo)
- * How to display exercises from API in intelligible format (ng-sanitize?)
-
- from select in view existing workouts might be able to incorporate ng route to get into workout and add exercises to workouts
+[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+[] After selecting workout I want users to be able to select days.
+[] After selecting Day I want users to be able to select  exercise.
