@@ -6,7 +6,6 @@ myApp.factory('workoutFactory', function() {
     var workoutFactory = {};
     workoutFactory.workouts = [];
     workoutFactory.activeWorkout = {};
-    // workoutFactory.users = [];
     workoutFactory.addWorkout = function(newWorkout) {
         this.workouts.push(newWorkout);
         console.log("this.workouts:", this.workouts);

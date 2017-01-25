@@ -44,4 +44,4 @@ router.post('/addWorkout', function(req, res) {
     res.status(200).send('post sent');
 });
 
-module.exports = router;  
+module.exports = router;

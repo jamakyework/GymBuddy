@@ -9,7 +9,3 @@ router.get('/getStarted', checkAuthImport, function(req, res) {
 });
 
 module.exports = router;
-
-
-//server route to indicate is user authenticated isauthenticated return success or failure,
-// client can call route to check if user is logged in.

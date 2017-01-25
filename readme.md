@@ -104,7 +104,7 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  * [x] featureBranch 3 - Create Factory to pass data
  * [x] featureBranch 4 - Create Views
  * [x] featureBranch 5 - Connect to API
- * [x] featureBranch 6 - Connect Views to logic
+ * [x] featureBranch 6 - Authentication
  * [] featureBranch 7 - users to be able to select workouts (when select workout button clicked, should display
                         only the workout that is clicked)
 
@@ -126,7 +126,9 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 
 Goals:
 ------
-* [] I want users to be able to log out
+
+Vers 1.0
+--------
 * [x] I want users workouts to be unique to logged in user.
 * [x] I want users to be able to select workouts
 * [] I want selected workout to populate page with workout information
@@ -134,30 +136,30 @@ Goals:
 * [] I want users to be able to view exercises in specific workout.
 * [] Sanitize API data (view without HTML tags)
 
-Do Now:
+
+Vers 2.0
 --------
-select workout opens workout
-user is able to add exercise to workout
-style, style, style,
-authentication
+[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+[] After selecting workout I want users to be able to select days.
+[] After selecting Day I want users to be able to select  exercise.
 
 To Do:
 ------
 * [] when select workout button clicked, should display only the workout that is clicked
 * [] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
      objects and adds to workout on click)
-* [] Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
+* [] Once custom exercise has been added to workout need to figure out how to add (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
 * [] css for modal
+
+Do Now:
+--------
+select workout opens workout
+user is able to add exercise to workout
+style, style, style,
+
 
 Things I need help with:
 ------------------------
-  * How to display exercises from API in intelligible format (ng-sanitize?)
-  * hoq to display workouts on page from select
+  * how to display exercises from API in intelligible format (ng-sanitize?)
+  * how to display workouts on page from select
   * How to add exercises to workout (in mongo)
-
-
- Vers 2.0
- --------
-[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
-[] After selecting workout I want users to be able to select days.
-[] After selecting Day I want users to be able to select  exercise.

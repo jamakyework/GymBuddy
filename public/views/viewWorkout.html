@@ -21,100 +21,76 @@
                 <h1 class="tron-text">GymBuddy</h1>
             </div>
         </div>
-        <!-- clicking select  under workout would bring you to this page -->
-        <!-- on this page would be be the specific workout -->
-        <!-- example workout X -->
-        <!-- Description -->
-        <!-- Image -->
-        <!-- list of exercises in workout -->
-        <!-- or -->
-        <!-- button to add exercise to workout -->
-        <!-- (get selected workout from button clicked on previous page) -->
-        <!-- (how to on page load, load existing workouts without needing to click view) -->
-        <!-- ng intit? -->
         <div class="container-fluid">
-            <div class="row" style="min-height:300px;">
-                <div class="col-sm-6">
-                    <h3>Left Tabs</h3>
-                    <hr/>
-                    <div class="col-xs-3">
-                        <h1> View Workout XYZ </h1>
-                        <ul class="nav nav-tabs tabs-left">
-
-                            <!-- <ul class="nav nav-tabs list-inline">
-              <li class="active"><a data-toggle="tab" href="#sunday">Sunday</a></li>
-              <li><a data-toggle="tab" href="#monday">Monday</a></li>
-              <li><a data-toggle="tab" href="#tuesday">Tuesday</a></li>
-              <li><a data-toggle="tab" href="#wednesday">Wednesday</a></li>
-              <li><a data-toggle="tab" href="#thursday">Thursday</a></li>
-              <li><a data-toggle="tab" href="#friday">Friday</a></li>
-              <li><a data-toggle="tab" href="#saturday">Saturday</a></li>
+            <h1> View Workout XYZ </h1>
+            <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
+                <div>
+                    <img ng-src="{{workout.imageUrl}}" height= 300px width= 300x/>
+                </div>
+                <div>
+                    {{workout.name}}
+                </div>
+                <div>
+                    {{workout.description}}
+                </div>
+                <div>
+                    <!-- Tabs Start -->
+            <!-- <ul class="nav nav-tabs list-inline">
+                <li class="active"><a data-toggle="tab" href="#sunday">Sunday</a></li>
+                <li><a data-toggle="tab" href="#monday">Monday</a></li>
+                <li><a data-toggle="tab" href="#tuesday">Tuesday</a></li>
+                <li><a data-toggle="tab" href="#wednesday">Wednesday</a></li>
+                <li><a data-toggle="tab" href="#thursday">Thursday</a></li>
+                <li><a data-toggle="tab" href="#friday">Friday</a></li>
+                <li><a data-toggle="tab" href="#saturday">Saturday</a></li>
             </ul>
             <div class="tab-content">
-              <div id="sunday" class="tab-pane fade in active">
-                <h3>Sunday</h3>
-                <p>Some content in Sunday.</p>
-                <p> Workout Image </p>
-                <p> This page should display the specific workout that was selected in
-                  a tab that would enable user to select day view and exercise for day using "selected
-                  workout id:" </p>
-              </div>
-              <div id="monday" class="tab-pane fade">
-                <h3>Monday</h3>
-                <p> List of Exercises for this day </p>
-              </div>
-              <div id="tuesday" class="tab-pane fade">
-                <h3>Tuesday</h3>
-                <p> List of Exercises for this day </p>
-              </div>
-              <div id="wednesday" class="tab-pane fade">
-                <h3>Wednesday</h3>
-                <p> List of Exercises for this day </p>
-                  </div>
+                <div id="sunday" class="tab-pane fade in active">
+                    <h3>Sunday</h3>
+                    <p>Some content in Sunday.</p>
+                    <p> Workout Image </p>
+                    <p> This page should display the specific workout that was selected in a tab that would enable user to select day view and exercise for day using "selected workout id:" </p>
+                </div>
+                <div id="monday" class="tab-pane fade">
+                    <h3>Monday</h3>
+                    <p> List of Exercises for this day </p>
+                </div>
+                <div id="tuesday" class="tab-pane fade">
+                    <h3>Tuesday</h3>
+                    <p> List of Exercises for this day </p>
+                </div>
+                <div id="wednesday" class="tab-pane fade">
+                    <h3>Wednesday</h3>
+                    <p> List of Exercises for this day </p>
+                </div>
                 <div id="thursday" class="tab-pane fade">
-                  <h3>Thursday</h3>
-                  <p> List of Exercises for this day </p>
+                    <h3>Thursday</h3>
+                    <p> List of Exercises for this day </p>
                 </div>
                 <div id="friday" class="tab-pane fade">
-                  <h3>Friday</h3>
-                  <p> List of Exercises for this day </p>
+                    <h3>Friday</h3>
+                    <p> List of Exercises for this day </p>
                 </div>
                 <div id="saturday" class="tab-pane fade">
-                  <h3>Saturday</h3>
-                  <p> List of Exercises for this day </p>
+                    <h3>Saturday</h3>
+                    <p> List of Exercises for this day </p>
                 </div>
             </div> -->
-
-                            <!-- start -->
-                            <div class="row" style="min-height:300px;">
-                                <div class="col-sm-6">
-                                    <h3>Left Tabs</h3>
-                                    <hr/>
-                                    <div class="col-xs-3">
-                                        <!-- required for floating -->
-                                        <!-- Nav tabs -->
-                                        <ul class="nav nav-tabs tabs-left">
-                                            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-                                            <li><a href="#profile" data-toggle="tab">Profile</a></li>
-                                            <li><a href="#messages" data-toggle="tab">Messages</a></li>
-                                            <li><a href="#settings" data-toggle="tab">Settings</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-9">
-                                        <!-- Tab panes -->
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="home">Home Tab.</div>
-                                            <div class="tab-pane" id="profile">Profile Tab.</div>
-                                            <div class="tab-pane" id="messages">Messages Tab.</div>
-                                            <div class="tab-pane" id="settings">Settings Tab.</div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                            <!-- end -->
-                            <input class="btn btn-danger navbar-btn" type="button" name="button" ng-click="home()" value="Home" />
-                    </div>
-</body>
-
+                        <!-- Tabs End -->
+            <div class="footer">
+            <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home"/>
+          </div>
+          </div>
 </html>
+
+<!-- clicking select  under workout would bring you to this page -->
+<!-- on this page would be be the specific workout -->
+<!-- example workout X -->
+<!-- Description -->
+<!-- Image -->
+<!-- list of exercises in workout -->
+<!-- or -->
+<!-- button to add exercise to workout -->
+<!-- (get selected workout from button clicked on previous page) -->
+<!-- (how to on page load, load existing workouts without needing to click view) -->
+<!-- ng intit? -->

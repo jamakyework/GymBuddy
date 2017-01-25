@@ -14,10 +14,10 @@ router.get('/logout', function(req, res) {
     res.status(201).send({message: "user logged out successfully"});
   });
 
-// router.get('/logout', function(req, res) {
+// router.get('/logout', function(req, res, err) {
 //   if(err){
 //     res.sendStatus(500);
-//   }else{
+//   } else {
 //     req.logout();
 //     req.session.destroy();
 //     res.status(201).send({message: "user logged out successfully"});
