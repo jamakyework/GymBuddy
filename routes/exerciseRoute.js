@@ -11,7 +11,7 @@ var exercisePath = path.join(__dirname, '../public/views/createNewExercise.html'
 });
 
 
-router.get('/viewExercise', function(req, res) {
+router.get('/viewExercise', checkAuthImport, function(req, res) {
     console.log('view Exercise html');
 var selectExercise = path.join(__dirname, '../public/views/viewExercise.html');
     res.sendFile(selectExercise);
@@ -19,7 +19,7 @@ var selectExercise = path.join(__dirname, '../public/views/viewExercise.html');
 
 router.get('/getExercise', function(req, res) {
     console.log('exercise get hit db');
-    exerciseImport.find().then(function(data) {
+    exerciseImport.find({username: req.user.username}).then(function(data) {
       console.log("data", data);
         res.send(data);
     });
@@ -29,6 +29,7 @@ router.post('/addExercise', function(req, res) {
     console.log('exercise post hit db');
     console.log('req.body:', req.body);
     var newExercise = exerciseImport(req.body);
+    newExercise.username = req.user.username;
     newExercise.save();
     res.status(200).send('post sent');
 });

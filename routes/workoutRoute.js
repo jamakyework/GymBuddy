@@ -44,11 +44,4 @@ router.post('/addWorkout', function(req, res) {
     res.status(200).send('post sent');
 });
 
-module.exports = router;
-
-
-
-// wourkoutImport.find({username: req.user.username},  function (err, uploads) {
-//     if (err) next(err);
-//     else {
-//       res.send(x);
+module.exports = router;  

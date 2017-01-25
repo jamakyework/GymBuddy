@@ -85,7 +85,6 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
             $window.location.href = '/exercise';
         };
 
-
         $scope.viewWorkout = function() {
             $scope.workouts = [];
             $http({

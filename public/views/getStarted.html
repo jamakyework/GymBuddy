@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
     <link rel="icon" type="image/gif" href="./images/favicon.png" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
@@ -18,66 +18,97 @@
     <div ng-controller="getStartedController">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
-            <h1 class="tron-text">GymBuddy</h1>
+                <h1 class="tron-text">GymBuddy</h1>
             </div>
-          </div>
-        <div class="container-fluid">
-            <label for="Create Workout"></label>
-            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()"/>
-            <label for="Create Exercise"></label>
-            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()"/>
-            <label for="View Workout"></label>
-            <input data-toggle="modal" data-target="#workoutModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()"/>
-            <div id="workoutModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Workouts</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="modalRepeat" ng-repeat='workout in workouts' >
-                            <img ng-src="{{workout.imageUrl}}"/>
-                            {{workout.name}}
-                            {{workout.description}}
-                            <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActive($index)" value="Select"/>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <label for="View Exercise"></label>
-            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
-            <div id="exerciseModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Exercise</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div ng-repeat='exercise in exercises'>
-                            <img ng-src="{{exercise.imageUrl}}"/>
-                            {{exercise.name}}
-                            {{exercise.description}}
-                            <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="selectExercise()" value="Select"/>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            <label for="Search For Exercise"></label>
-            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()"/>
         </div>
-        <label for="Log Out"></label>
-        <input class="btn btn-danger" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()"/>
+        <div class="container-fluid">
+            <!-- Create Workout Btn -->
+            <label for="Create Workout"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()" />
+
+            <!-- Create Exercise Btn -->
+            <label for="Create Exercise"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createExercise" value="Create Exercise" ng-model="createExercise" ng-click="createExercise()" />
+
+            <!-- View Workout Btn -->
+            <label for="View Workout"></label>
+            <input data-toggle="modal" data-target="#workoutModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()" />
+            <!-- workout  modal begin -->
+            <div id="workoutModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Workouts</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
+                                <div>
+                                    <img ng-src="{{workout.imageUrl}}" height= 100px width= 100px/>
+                                </div>
+                                <div>
+                                    {{workout.name}}
+                                </div>
+                                <div>
+                                    {{workout.description}}
+                                </div>
+                                <div>
+                                    <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActive($index)" value="Select" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- workout  modal end -->
+
+            <!-- View Exercise Btn -->
+            <label for="View Exercise"></label>
+            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()" />
+            <!-- exercise  modal begin -->
+            <div id="exerciseModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Exercise</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
+                                <div>
+                                    <img ng-src="{{exercise.imageUrl}}"  height= 100px width= 100px/>
+                                </div>
+                                <div>
+                                    {{exercise.name}}
+                                </div>
+                                <div>
+                                    {{exercise.description}}
+                                </div>
+                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="selectExercise()" value="Select" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- exercise  modal end-->
+
+            <!-- Search For Exercise Btn -->
+            <label for="Search For Exercise"></label>
+            <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()" />
+
+            <!-- end  div container -->
+        <label for="Log Out"></label>
+        <input class="btn btn-danger btn-lg btn-block navbar-btn" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()"/>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>

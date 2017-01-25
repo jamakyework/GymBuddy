@@ -147,10 +147,12 @@ To Do:
 * [] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
      objects and adds to workout on click)
 * [] Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
+* [] css for modal
 
 Things I need help with:
 ------------------------
   * How to display exercises from API in intelligible format (ng-sanitize?)
+  * hoq to display workouts on page from select
   * How to add exercises to workout (in mongo)
 
 

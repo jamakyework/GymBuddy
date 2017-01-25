@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GymBuddy - Workout Planning Made Easy</title>
     <link rel="icon" type="image/gif" href="./images/favicon.png" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
-<body ng-app="myApp" >
-  <div ng-controller="registerController">
-    <div class="jumbotron jumbotron-fluid text-center">
-    <div class="container">
-    <h1 class="tron-text">GymBuddy</h1>
-    </div>
-      </div>
+
+<body ng-app="myApp">
+    <div ng-controller="registerController">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container">
+                <h1 class="tron-text">GymBuddy</h1>
+            </div>
+        </div>
+        <div class="container-fluid">
         <h1>Register</h1>
         <form>
             <div>
                 <label for="username">Username:</label>
-                <input ng-model="username" type="text" name="username" id="username"/>
+                <input ng-model="username" type="text" name="username" id="username" />
             </div>
             <div>
                 <label for="password">Password:</label>
-                <input ng-model="password" type="password" name="password" id="password"/>
+                <input ng-model="password" type="password" name="password" id="password" />
             </div>
             <div>
-                <input class="btn btn-primary navbar-btn" ng-click="register()" type="submit" value="Register"/>
-                <input class="btn btn-danger navbar-btn" ng-click="cancel()" type="submit" value="Cancel"/>
+                <input class="btn btn-primary navbar-btn" ng-click="register()" type="submit" value="Register" />
+                <input class="btn btn-danger navbar-btn" ng-click="cancel()" type="submit" value="Cancel" />
             </div>
         </form>
+      </div>
     </div>
+
 </body>
+
 </html>
