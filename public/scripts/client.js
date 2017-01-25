@@ -131,16 +131,17 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
         };
 
         //future logout button
-        // $scope.logout = function() {
-        //   $http({
-        //       method: 'GET',
-        //       url: '/logout',
-        //   }).then(function successCallback(response) {
-        //       console.log("response:", response);
-        //   }, function errorCallback(error) {
-        //       console.log('error', error);
-        //   });
-        // };
+        $scope.logout = function() {
+          $http({
+              method: 'GET',
+              url: '/logout',
+          }).then(function successCallback(response) {
+              console.log("response:", response);
+                $window.location.href = '/';
+          }, function errorCallback(error) {
+              console.log('error', error);
+          });
+        };
   }]); //end getStartedController
 
 

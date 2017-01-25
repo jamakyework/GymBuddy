@@ -3,25 +3,23 @@ var path = require('path');
 var router = express.Router();
 var passport = require('passport');
 var workoutImport = require('../models/workouts.js');
+var checkAuthImport = require("./checkAuth.js");
 
-router.get('/workout', function(req, res) {
+router.get('/workout', checkAuthImport, function(req, res) {
     console.log('workout get html');
 var workoutPath = path.join(__dirname, '../public/views/createNewWorkout.html');
     res.sendFile(workoutPath);
 });
 
-router.get('/viewWorkout', function(req, res) {
+router.get('/viewWorkout', checkAuthImport, function(req, res) {
     console.log('select workout html');
 var selectWorkout = path.join(__dirname, '../public/views/viewWorkout.html');
     res.sendFile(selectWorkout);
 });
 
-//is there a function to get workout by username?
-///getWorkout/:username?
-
 router.get('/getWorkout', function(req, res) {
     console.log('workout get db');
-    workoutImport.find().then(function(data) {
+    workoutImport.find({username: req.user.username}).then(function(data) {
       console.log("data", data);
         res.send(data);
     });
@@ -48,4 +46,9 @@ router.post('/addWorkout', function(req, res) {
 
 module.exports = router;
 
-//if req.isAuthenticated() on the get then x otherwise send 401, on client side if req.authenticated(send back 200)
+
+
+// wourkoutImport.find({username: req.user.username},  function (err, uploads) {
+//     if (err) next(err);
+//     else {
+//       res.send(x);

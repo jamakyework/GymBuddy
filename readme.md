@@ -113,52 +113,49 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  Completed:
  ---------
  On the most base level what should Gym Buddy Do:
-* [x] I want users to login.
-* [x] I want users to register.
-* [x] I want users to create workouts.
-* [x] I want users to create exercises.
-* [x] I want users to be able to view workouts.
-* [x] I want users to be able to view exercises.
+* [x] I want users to login
+* [x] I want users to register
+* [x] I want only authenticated users to access application
+* [x] I want users to create workouts
+* [x] I want users to create exercises
+* [x] I want users to be able to view workouts
+* [x] I want users to be able to view exercises
+* [x] I want user to only be able to view their specific workouts
+* [x] I want user to only be able to view their specific exercises
 * [x] I want click to view/exercises and display in modal window
 
 Goals:
 ------
-* [1] I want users workouts to be unique to logged in user.
-* [2] I want users to be able to select workouts
-* [3] I want users to be able to add exercises to selected workout.
-* [4] I want users to be able to view exercises in specific workout.
-* [5] Sanitize API data (view without HTML tags)
 * [] I want users to be able to log out
-
+* [x] I want users workouts to be unique to logged in user.
+* [x] I want users to be able to select workouts
+* [] I want selected workout to populate page with workout information
+* [] I want users to be able to add exercises to selected workout.
+* [] I want users to be able to view exercises in specific workout.
+* [] Sanitize API data (view without HTML tags)
 
 Do Now:
 --------
-connect login, req.user.username,
 select workout opens workout
 user is able to add exercise to workout
 style, style, style,
-
+authentication
 
 To Do:
 ------
-* [1] Connect login to workout and exercise in DB
-* [2] when select workout button clicked, should display only the workout that is clicked
-* [3] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
+* [] when select workout button clicked, should display only the workout that is clicked
+* [] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
      objects and adds to workout on click)
-* [4] Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
-
+* [] Once custom exercise has been added to workout need to figure out how to add  (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
 
 Things I need help with:
 ------------------------
-  * [x] How to connect logged in user to specific workouts (in mongo)
-      <!-- is there a function to get workout only username? -->
-      
   * How to display exercises from API in intelligible format (ng-sanitize?)
   * How to add exercises to workout (in mongo)
 
+
  Vers 2.0
  --------
-
 [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
 [] After selecting workout I want users to be able to select days.
 [] After selecting Day I want users to be able to select  exercise.

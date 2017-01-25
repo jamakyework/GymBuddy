@@ -8,12 +8,25 @@ router.get('/', function(req, res) {
   res.sendFile(indexPath);
 });
 
+router.get('/logout', function(req, res) {
+    req.logout();
+    req.session.destroy();
+    res.status(201).send({message: "user logged out successfully"});
+  });
+
+// router.get('/logout', function(req, res) {
+//   if(err){
+//     res.sendStatus(500);
+//   }else{
+//     req.logout();
+//     req.session.destroy();
+//     res.status(201).send({message: "user logged out successfully"});
+//   }
+//   });
+
 router.post('/', passport.authenticate('local'), function(req, res) {
     res.sendStatus(200);
 });
 
+
 module.exports = router;
-
-
-//server route to indicate is user authenticated isauthenticated return success or failure,
-// client can call route to check if user is logged in.

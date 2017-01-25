@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path');
 var router = express.Router();
 var exerciseImport = require('../models/exercises.js');
+var checkAuthImport = require("./checkAuth.js");
 
-router.get('/exercise', function(req, res) {
+router.get('/exercise', checkAuthImport, function(req, res) {
     console.log('exercise get html');
 var exercisePath = path.join(__dirname, '../public/views/createNewExercise.html');
     res.sendFile(exercisePath);

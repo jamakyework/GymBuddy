@@ -1,3 +1,7 @@
+body{
+  background-color:	#404040;
+}
+
 .jumbotron.jumbotron-fluid.text-center {
   /*background-color: #8B0000;*/
   background-color: #a6a6a6;
@@ -11,12 +15,10 @@
   font-weight: bold !important;
 }
 
-body{
-  background-color:	#404040;
+.modalRepeat {
+  /*color: #AA3939 !important;*/
+  /*background-color: #a6a6a6;*/
 }
-
-
-
 
 
 /* CSS - Cascading Style Sheet */
