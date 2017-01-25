@@ -128,11 +128,12 @@ Goals:
 * [3] I want users to be able to add exercises to selected workout.
 * [4] I want users to be able to view exercises in specific workout.
 * [5] Sanitize API data (view without HTML tags)
+* [] I want users to be able to log out
 
 
 Do Now:
 --------
-connect login
+connect login, req.user.username,
 select workout opens workout
 user is able to add exercise to workout
 style, style, style,
@@ -149,12 +150,15 @@ To Do:
 
 Things I need help with:
 ------------------------
-  * How to connect logged in user to specific workouts (in mongo)
+  * [x] How to connect logged in user to specific workouts (in mongo)
+      <!-- is there a function to get workout only username? -->
+      
   * How to display exercises from API in intelligible format (ng-sanitize?)
   * How to add exercises to workout (in mongo)
 
  Vers 2.0
  --------
+
 [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
 [] After selecting workout I want users to be able to select days.
 [] After selecting Day I want users to be able to select  exercise.

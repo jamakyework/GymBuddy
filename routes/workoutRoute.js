@@ -16,6 +16,9 @@ var selectWorkout = path.join(__dirname, '../public/views/viewWorkout.html');
     res.sendFile(selectWorkout);
 });
 
+//is there a function to get workout by username?
+///getWorkout/:username?
+
 router.get('/getWorkout', function(req, res) {
     console.log('workout get db');
     workoutImport.find().then(function(data) {
@@ -27,6 +30,7 @@ router.get('/getWorkout', function(req, res) {
 router.get('/getWorkout/:id', function(req, res) {
     console.log('workout get db');
     workoutImport.find({_id:req.params.id}).then(function(data) {
+      console.log("_id:req.params.id:", {_id:req.params.id});
       console.log("data", data);
         res.send(data);
     });
@@ -35,9 +39,9 @@ router.get('/getWorkout/:id', function(req, res) {
 router.post('/addWorkout', function(req, res) {
     console.log('workout post hit');
     console.log('req.body:', req.body);
-    console.log('username:', req.user);
+    console.log('username:', req.user.username);
     var newWorkout = workoutImport(req.body);
-    newWorkout.user = req.user.username;
+    newWorkout.username = req.user.username;
     newWorkout.save();
     res.status(200).send('post sent');
 });

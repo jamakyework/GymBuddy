@@ -1,6 +1,6 @@
 .jumbotron.jumbotron-fluid.text-center {
-  background-color: #8B0000;
-  /*background-color: #800000;*/
+  /*background-color: #8B0000;*/
+  background-color: #a6a6a6;
 }
 
 .tron-text {
@@ -14,3 +14,19 @@
 body{
   background-color:	#404040;
 }
+
+
+
+
+
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF */
+
+/* As hex codes */
+
+.color-primary-0 { color: #AA3939 }	/* Main Primary color */
+.color-primary-1 { color: #FFAAAA }
+.color-primary-2 { color: #D46A6A }
+.color-primary-3 { color: #801515 }
+.color-primary-4 { color: #550000 }
