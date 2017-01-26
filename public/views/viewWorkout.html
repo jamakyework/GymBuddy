@@ -22,65 +22,67 @@
             </div>
         </div>
         <div class="container-fluid">
-            <h1> View Workout XYZ </h1>
+            <h1>View Workout</h1>
             <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
                 <div>
                     <img ng-src="{{workout.imageUrl}}" height= 300px width= 300x/>
                 </div>
                 <div>
-                    {{workout.name}}
+                   Workout Name: {{workout.name}}
                 </div>
                 <div>
-                    {{workout.description}}
+                  Description: {{workout.description}}
+                </div>
+                <div ng-repeat='exercise in workout.exercise'>
+                    <div>
+                    <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                  </div>
+                  <div>
+                  Exercise Name: {{exercise.name}}
                 </div>
                 <div>
-                    <!-- Tabs Start -->
-            <!-- <ul class="nav nav-tabs list-inline">
-                <li class="active"><a data-toggle="tab" href="#sunday">Sunday</a></li>
-                <li><a data-toggle="tab" href="#monday">Monday</a></li>
-                <li><a data-toggle="tab" href="#tuesday">Tuesday</a></li>
-                <li><a data-toggle="tab" href="#wednesday">Wednesday</a></li>
-                <li><a data-toggle="tab" href="#thursday">Thursday</a></li>
-                <li><a data-toggle="tab" href="#friday">Friday</a></li>
-                <li><a data-toggle="tab" href="#saturday">Saturday</a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="sunday" class="tab-pane fade in active">
-                    <h3>Sunday</h3>
-                    <p>Some content in Sunday.</p>
-                    <p> Workout Image </p>
-                    <p> This page should display the specific workout that was selected in a tab that would enable user to select day view and exercise for day using "selected workout id:" </p>
+                  Exercise Description: {{exercise.description}}
                 </div>
-                <div id="monday" class="tab-pane fade">
-                    <h3>Monday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-                <div id="tuesday" class="tab-pane fade">
-                    <h3>Tuesday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-                <div id="wednesday" class="tab-pane fade">
-                    <h3>Wednesday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-                <div id="thursday" class="tab-pane fade">
-                    <h3>Thursday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-                <div id="friday" class="tab-pane fade">
-                    <h3>Friday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-                <div id="saturday" class="tab-pane fade">
-                    <h3>Saturday</h3>
-                    <p> List of Exercises for this day </p>
-                </div>
-            </div> -->
-                        <!-- Tabs End -->
+                <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="addToWorkout"
+                value="Select Exercise" ng-model="viewExercise" ng-click="viewExercise()">
+                <!-- <input class="btn btn-default" type="button" name="createExercise" value="Add  New Exercise" ng-click="createExercise()"> -->
+              </div>
+<!-- <div ng-controller="getStartedController"> -->
+              <!-- exercise  modal begin -->
+              <div id="exerciseModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Exercise</h4>
+                          </div>
+                          <div class="modal-body">
+                              <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
+                                  <div>
+                                      <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                                  </div>
+                                  <div>
+                                      {{exercise.name}}
+                                  </div>
+                                  <div>
+                                      {{exercise.description}}
+                                  </div>
+                                  <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout(exercise)" value="Add To Workout"/>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+<!-- </div> -->
             <div class="footer">
             <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home"/>
           </div>
           </div>
+        </div>
+ </body>
 </html>
 
 <!-- clicking select  under workout would bring you to this page -->
@@ -94,3 +96,46 @@
 <!-- (get selected workout from button clicked on previous page) -->
 <!-- (how to on page load, load existing workouts without needing to click view) -->
 <!-- ng intit? -->
+<!-- Tabs Start -->
+<!-- <ul class="nav nav-tabs list-inline">
+<li class="active"><a data-toggle="tab" href="#sunday">Sunday</a></li>
+<li><a data-toggle="tab" href="#monday">Monday</a></li>
+<li><a data-toggle="tab" href="#tuesday">Tuesday</a></li>
+<li><a data-toggle="tab" href="#wednesday">Wednesday</a></li>
+<li><a data-toggle="tab" href="#thursday">Thursday</a></li>
+<li><a data-toggle="tab" href="#friday">Friday</a></li>
+<li><a data-toggle="tab" href="#saturday">Saturday</a></li>
+</ul>
+<div class="tab-content">
+<div id="sunday" class="tab-pane fade in active">
+<h3>Sunday</h3>
+<p>Some content in Sunday.</p>
+<p> Workout Image </p>
+<p> This page should display the specific workout that was selected in a tab that would enable user to select day view and exercise for day using "selected workout id:" </p>
+</div>
+<div id="monday" class="tab-pane fade">
+<h3>Monday</h3>
+<p> List of Exercises for this day </p>
+</div>
+<div id="tuesday" class="tab-pane fade">
+<h3>Tuesday</h3>
+<p> List of Exercises for this day </p>
+</div>
+<div id="wednesday" class="tab-pane fade">
+<h3>Wednesday</h3>
+<p> List of Exercises for this day </p>
+</div>
+<div id="thursday" class="tab-pane fade">
+<h3>Thursday</h3>
+<p> List of Exercises for this day </p>
+</div>
+<div id="friday" class="tab-pane fade">
+<h3>Friday</h3>
+<p> List of Exercises for this day </p>
+</div>
+<div id="saturday" class="tab-pane fade">
+<h3>Saturday</h3>
+<p> List of Exercises for this day </p>
+</div>
+</div> -->
+    <!-- Tabs End -->

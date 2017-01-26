@@ -3,6 +3,7 @@ var path = require('path');
 var router = express.Router();
 var passport = require('passport');
 var workoutImport = require('../models/workouts.js');
+var exercisesImport = require('../models/exercises.js');
 var checkAuthImport = require("./checkAuth.js");
 
 router.get('/workout', checkAuthImport, function(req, res) {
@@ -28,7 +29,7 @@ router.get('/getWorkout', function(req, res) {
 router.get('/getWorkout/:id', function(req, res) {
     console.log('workout get db');
     workoutImport.find({_id:req.params.id}).then(function(data) {
-      console.log("_id:req.params.id:", {_id:req.params.id});
+      console.log("req.params.id:", {_id:req.params.id});
       console.log("data", data);
         res.send(data);
     });
@@ -43,5 +44,32 @@ router.post('/addWorkout', function(req, res) {
     newWorkout.save();
     res.status(200).send('post sent');
 });
+
+
+router.put('/addExerciseToWorkout', function(req, res) {
+  console.log("addExercise req.body:", req.body);
+workoutImport.findOneAndUpdate(
+    {_id: req.body.workout_id},
+    {$push: {exercise: req.body.exercise}},
+    {safe: true, upsert: true},
+    function(err, model) {
+        console.log(err);
+    }
+);
+});
+
+
+// router.post('/addExerciseToWorkout', function(req, res) {
+// workoutImport.findOneAndUpdate(
+//     {_id: req.query.id},
+//     {$push: {exercise: item}},
+//     {safe: true, upsert: true},
+//     function(err, model) {
+//         console.log(err);
+//     }
+// );
+// });
+
+
 
 module.exports = router;

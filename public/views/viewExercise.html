@@ -13,7 +13,7 @@
 </head>
 
 <body ng-app="myApp">
-    <div ng-controller="viewExerciseController">
+    <div ng-controller="viewExerciseController" ng-init="selectedExercise()">
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
                 <h1 class="tron-text">GymBuddy</h1>
@@ -21,6 +21,20 @@
         </div>
         <div class="container fluid">
             <h1>View Exercise XYZ </h1>
+            <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
+                <div>
+                    <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                </div>
+                <div>
+                    {{exercise.name}}
+                </div>
+                <div>
+                    {{exercise.description}}
+                </div>
+                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout()" value="Add To Workout"/>
+                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToExercise()" value="Add To Exercise"/>
+            </div>
+
             <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home"/>
         </div>
     </div>

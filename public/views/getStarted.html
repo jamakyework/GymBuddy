@@ -67,7 +67,8 @@
 
             <!-- View Exercise Btn -->
             <label for="View Exercise"></label>
-            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()" />
+            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn"
+            type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
             <!-- exercise  modal begin -->
             <div id="exerciseModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -87,7 +88,7 @@
                                 <div>
                                     {{exercise.description}}
                                 </div>
-                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="selectExercise()" value="Select" />
+                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActiveExercise($index)" value="Select" />
                             </div>
                         </div>
                         <div class="modal-footer">
