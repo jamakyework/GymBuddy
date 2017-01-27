@@ -1,7 +1,7 @@
 GymBuddy Workout Planner
 ========================
 John Amakye
-January 15th 2016 | Version 1.0
+January 2016 | Version 1.0
 
 ##Document Objectives
 The purpose of this document is to provide detailed documentation about the application to be developed for the Tau Cohort Solo Project.
@@ -96,9 +96,9 @@ Password recovery option; help users recover account if password is lost
 Delete account option; option for users to delete account if they no longer want to use application
 Option to check off exercise when completed for the day
 Monthly email report/summary of workouts indicating days worked out and exercises completed
----------------------------------------------------------------------------------------------------------------------
+=====================================================================================================================
 
-##Steps completed
+##GitMap completed
  * [x] featureBranch 1 - User Login and Authentication/User Database
  * [x] featureBranch 2 - Add/Create/View Workout and Add/Create/View Exercise
  * [x] featureBranch 3 - Create Factory to pass data
@@ -108,9 +108,38 @@ Monthly email report/summary of workouts indicating days worked out and exercise
  * [] featureBranch 7 - users to be able to select workouts (when select workout button clicked, should display
                         only the workout that is clicked)
 
- Story of Gym Buddy
+Story of Gym Buddy
+===================
 
- Completed:
+##Goals
+
+##Vers 1.0
+--------
+* [x] I want users workouts to be unique to logged in user.
+* [x] I want users to be able to select workouts
+* [x] I want selected workout to populate page with workout information
+* [x] I want users to be able to add exercises to selected workout.
+* [x] I want users to be able to view exercises in specific workout.
+* [x] when select workout button clicked, should display only the workout that is clicked
+* [x] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
+     objects and adds to workout on click)
+* [] Sanitize API data (view without HTML tags)
+
+
+##Vers 2.0
+--------
+[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+[] After selecting workout I want users to be able to select days.
+[] After selecting Day I want users to be able to select  exercise.
+[] I want users to be able to upload pictures from computer
+[] select and add exercise from API
+[] add alerts
+[]  add modal change when option is selected
+[] add delete exercise button
+[] add delete workout
+
+
+##Completed
  ---------
  On the most base level what should Gym Buddy Do:
 * [x] I want users to login
@@ -123,43 +152,27 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 * [x] I want user to only be able to view their specific workouts
 * [x] I want user to only be able to view their specific exercises
 * [x] I want click to view/exercises and display in modal window
+* [x] css for modal
 
-Goals:
-------
 
-Vers 1.0
+##To Do:
 --------
-* [x] I want users workouts to be unique to logged in user.
-* [x] I want users to be able to select workouts
-* [] I want selected workout to populate page with workout information
-* [] I want users to be able to add exercises to selected workout.
-* [] I want users to be able to view exercises in specific workout.
-* [] Sanitize API data (view without HTML tags)
-
-
-Vers 2.0
---------
-[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
-[] After selecting workout I want users to be able to select days.
-[] After selecting Day I want users to be able to select  exercise.
-
-To Do:
-------
-* [] when select workout button clicked, should display only the workout that is clicked
-* [] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
-     objects and adds to workout on click)
 * [] Once custom exercise has been added to workout need to figure out how to add (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
-* [] css for modal
-
-Do Now:
---------
-select workout opens workout
-user is able to add exercise to workout
-style, style, style,
 
 
-Things I need help with:
+##Do Now:
+---------
+Delete Exercise/Workout Btn
+Sanitize API data
+(api/v2/exercise/?language)
+No Result option for API search
+Indicate who is logged in
+change to indicate that workout/exercise has been saved(so maybe an alert(sweet alerts?))
+placeholder example for exercises
+Add to workout change from add to added( ng.show, ng.hide)
+
+
+##Things I need help with:
 ------------------------
   * how to display exercises from API in intelligible format (ng-sanitize?)
-  * how to display workouts on page from select
-  * How to add exercises to workout (in mongo)
+  * I want users to be able to upload pictures from computer

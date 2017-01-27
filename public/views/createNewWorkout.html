@@ -3,14 +3,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GymBuddy - Workout Planning Made Easy - Create New Workout</title>
+    <title>GymBuddy - Workout Planning Made Easy</title>
     <link rel="icon" type="image/gif" href="./images/favicon.png" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
+
 
 <body ng-app="myApp">
     <div ng-controller="createWorkoutController">
@@ -29,10 +32,46 @@
                    </textarea>
                 <label for="imageUrl"></label>
                 <input placeholder="Enter ImageUrl" class="form-control" type="text" name="" value="" ng-model="imageUrl" />
+              </form>
+                <div>
+                <label for="Submit"></label>
                 <input type="button" class="btn btn-primary navbar-btn" name="input" ng-click="addWorkout()" value="Submit" />
+                <label for="View Workout"></label>
+                <input data-toggle="modal" class="btn btn-primary navbar-btn" data-target="#workoutModal" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()" />
+                <label for="Home"></label>
                 <input type="button" class="btn btn-danger navbar-btn" name="button" ng-click="home()" value="Home" />
-            </form>
-            </form>
+              </div>
+            <!-- workout  modal begin -->
+            <div id="workoutModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Workouts</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
+                                <div>
+                                    <img ng-src="{{workout.imageUrl}}" height= 200px width= 200px/>
+                                </div>
+                                <div>
+                                    {{workout.name}}
+                                </div>
+                                <div>
+                                    {{workout.description}}
+                                </div>
+                                <div>
+                                    <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActive($index)" value="Select" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- workout  modal end -->
         </div>
     </div>
 </body>

@@ -3,14 +3,17 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GymBuddy - Workout Planning Made Easy - Create New Exercise</title>
+    <title>GymBuddy - Workout Planning Made Easy</title>
     <link rel="icon" type="image/gif" href="./images/favicon.png" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="./vendors/bootstrap.min.css" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
     <script src="./vendors/angular.min.js" charset="utf-8"></script>
     <script src="./scripts/client.js" charset="utf-8"></script>
 </head>
+
 
 <body ng-app="myApp">
     <div ng-controller="createExerciseController">
@@ -29,11 +32,45 @@
                </textarea>
                 <label for="imageUrl"></label>
                 <input placeholder="Enter ImageUrl" class="form-control" type="text" name="" value="" ng-model="imageUrl" />
-                <div>
-                <input type="button" class="btn btn-danger navbar-btn" ng-click="addExercise()" value="Submit" />
-                <input type="button" class="btn btn-primary navbar-btn" ng-click="home()" value="Home" />
-              </div>
             </form>
+            <div>
+                <label for="Submit"></label>
+                <input type="button" class="btn btn-primary navbar-btn" ng-click="addExercise()" value="Submit" />
+                <!-- View Exercise Btn -->
+                <label for="View Existing Exercise"></label>
+                <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-primary navbar-btn" type="button" name="viewExercise" value="View Existing Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
+                <label for="Home"></label>
+                <input type="button" class="btn btn-danger navbar-btn" ng-click="home()" value="Home" />
+            </div>
+            <!-- exercise  modal begin -->
+            <div id="exerciseModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Exercise</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
+                                <div>
+                                    <img ng-src="{{exercise.imageUrl}}" height=200px width=200px/>
+                                </div>
+                                <div>
+                                    {{exercise.name}}
+                                </div>
+                                <div>
+                                    {{exercise.description}}
+                                </div>
+                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="setActiveExercise($index)" value="Select" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- exercise  modal end-->
         </div>
     </div>
 </body>

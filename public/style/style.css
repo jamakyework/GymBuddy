@@ -8,7 +8,8 @@ div {
 }
 
 .register{
-  color:#800000;
+  color: white;
+  font-size: 125% !important;
 }
 
 .jumbotron.jumbotron-fluid.text-center {
@@ -39,6 +40,9 @@ div {
    color: white !important;
    background: #800000 !important;
  }
+   .btn.btn-default.btn-lg.btn-block.navbar-btn:hover {
+     color: black !important;
+   }
 
 btn.btn-default.navbar-btn {
   text-align: center;

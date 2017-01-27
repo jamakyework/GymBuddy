@@ -36,6 +36,7 @@ myApp.controller('indexController', ['$scope', '$http', '$window',
                 $window.location.href = '/getStarted';
             }, function errorCallback(error) {
                 console.log('error', error);
+                alert("Incorrect password or username, Please try again or register ");
                 $window.location.href = '/';
             });
         };
@@ -62,9 +63,11 @@ myApp.controller('registerController', ['$scope', '$http', '$window',
                 data: userInfo
             }).then(function successCallback(response) {
                 console.log('success', response);
+                alert("Thanks for registering");
                 $window.location.href = '/';
             }, function errorCallback(error) {
                 console.log('error occurred!');
+                alert("Unsuccesful registration please try again");
             });
 
         };
@@ -170,10 +173,31 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
                 data: newWorkout
             }).then(function successCallback(response) {
                 console.log('success', response);
+                alert("Workout added successfully");
                 $window.location.reload();
             }, function errorCallback(error) {
                 console.log('error occurred!');
             });
+        };// end addWorkout
+
+        $scope.viewWorkout = function() {
+            $scope.workouts = [];
+            $http({
+                method: 'GET',
+                url: '/getWorkout',
+            }).then(function successCallback(response) {
+                console.log("response:", response);
+                $scope.workouts = response.data;
+                console.log("$scope.workouts:", $scope.workouts);
+            }); function errorCallback(error) {
+                console.log('error', error);
+            }
+        };//end viewWorkout
+
+        $scope.setActive = function(index) {
+            console.log('this.workout:', this.workout);
+            sessionStorage.setItem("selectedWorkoutId", this.workout._id);
+            $window.location.href = '/viewWorkout';
         };
     }
 ]);
@@ -205,6 +229,28 @@ myApp.controller('createExerciseController', ['$scope', '$http', '$window',
                 console.log('error occurred!');
             });
         };
+
+        $scope.viewExercise = function() {
+            $scope.exercises = [];
+            $http({
+                method: 'GET',
+                url: '/getExercise',
+            }).then(function successCallback(response) {
+                console.log("response:", response);
+                $scope.exercises = response.data;
+                console.log("$scope.exercises:", $scope.exercises);
+            }); function errorCallback(error) {
+                console.log('error', error);
+            }
+        };
+
+
+        $scope.setActiveExercise = function(index) {
+            console.log('this.exercise:', this.exercise);
+            sessionStorage.setItem("selectedExerciseId", this.exercise._id);
+            $window.location.href = '/viewExercise';
+        };
+
     }
 ]);
 
@@ -364,21 +410,25 @@ myApp.controller("searchExerciseController", ["$scope", '$http', '$window',
         };
 
         $scope.searchExerciseFunc = function() {
+            var searchExercise = $scope.searchExercise;
+            console.log("searchExercise", searchExercise);
+
             // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";//
             // var exerciseURL = "https://wger.de/api/v2/exercise.api/";
             // var exerciseURL = "https://wger.de/api/v2/exercise.json/?";
             // var exerciseURL = "https://wger.de/api/v2/exercise.api/?format=json";
-
-            var searchExercise = $scope.searchExercise;
-            var exerciseURL = "https://wger.de/api/v2/exercise.json/"; //pulls data from API
+            // var exerciseURL = "https://wger.de/api/v2/exercise.json/";
+            // var exerciseURL = "https://wger.de/api/v2/exercise.api/?name/" + searchExercise;
+            // var exerciseURL = "https://wger.de/api/v2/exercise.api/?name/";
+            var exerciseURL = "https://wger.de/api/v2/exercise.json/";
 
             $scope.exercises = [];
             $http({
                 method: 'GET',
                 url: exerciseURL,
-                dataType: "JSON",
+                dataType: "application/json",
             }).then(function successCallback(response) {
-                console.log("This is response:", response);
+                console.log("response:", response);
                 // console.log("This is in results:", response.data.results);
                 // console.log("This is in results[0]:", response.data.results[0]);
                 // console.log("This is in results:", response.results.name);

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://wger.de/api/v2/exercise.api/?name/10minabs -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="author" content="Roland Geider"><meta name="google-site-verification" content="Ot1mvBzMtxWYqg4qxrLUVAEx7ELYgJbV-9l63IRxRn8"><meta name="msvalidate.01" content="EDD23891864A23996A05BB71B0475339"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- OpenGraph --><meta property="og:url" content="https://wger.de/api/v2/exercise.api/?name/10minabs"><meta property="og:type" content="website"><meta property="og:image" content="https://wger.de/static/images/logos/logo-marketplace-256.png"><!-- twitter cards --><link rel="stylesheet" href="./REST API - Exercise List_files/49a43285c5ef.css" type="text/css"><link rel="icon" href="https://wger.de/static/images/favicon.png" type="image/png"><script type="text/javascript" defer="" async="" src="./REST API - Exercise List_files/piwik.js"></script><script type="text/javascript" src="./REST API - Exercise List_files/cda15c149c50.js"></script><link rel="stylesheet" type="text/css" href="./REST API - Exercise List_files/prettify.css"><script src="./REST API - Exercise List_files/prettify-min.js"></script><script>
+    $(document).ready(function() {
+        prettyPrint();
+    });
+</script><script>
+    $(document).ready(function() {
+
+        if (typeof wgerCustomPageInit != "undefined")
+        {
+            wgerCustomPageInit();
+        }
+
+        // Init the modal dialog for editing forms
+        wgerFormModalDialog();
+
+        // Initialise the hook to reload the main-content
+        wgerLoadMaincontent();
+
+        // Check for RO-access before allowing sharing
+        wgerToggleReadOnlyAccess();
+     });
+    </script><title>REST API - Exercise List</title></head><body><header><div class="container"><div class="row"><div class="col-md-9" style="padding-bottom: 0.5em;"><span class="name">wger</span><span class="regular">| Workout Manager</span></div><div class="col-md-3"><a href="https://wger.de/en/contact">Get in touch</a>
+                |
+
+                
+                
+                
+                <div class="btn-group"><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown"><img src="./REST API - Exercise List_files/flag-en.svg" width="18" height="11" alt="English" title="English" style="border: 1px solid #151515;">
+                        English <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="https://wger.de/eni/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-en.svg" width="18" height="11" alt="English" title="English" style="border: 1px solid #151515;">
+English</a></li><li><a href="https://wger.de/dei/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-de.svg" width="18" height="11" alt="German" title="German" style="border: 1px solid #151515;">
+German</a></li><li><a href="https://wger.de/bgi/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-bg.svg" width="18" height="11" alt="Bulgarian" title="Bulgarian" style="border: 1px solid #151515;">
+Bulgarian</a></li><li><a href="https://wger.de/esi/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-es.svg" width="18" height="11" alt="Spanish" title="Spanish" style="border: 1px solid #151515;">
+Spanish</a></li><li><a href="https://wger.de/rui/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-ru.svg" width="18" height="11" alt="Russian" title="Russian" style="border: 1px solid #151515;">
+Russian</a></li><li><a href="https://wger.de/nli/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-nl.svg" width="18" height="11" alt="Dutch" title="Dutch" style="border: 1px solid #151515;">
+Dutch</a></li><li><a href="https://wger.de/pti/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-pt.svg" width="18" height="11" alt="Portuguese" title="Portuguese" style="border: 1px solid #151515;">
+Portuguese</a></li><li><a href="https://wger.de/eli/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-el.svg" width="18" height="11" alt="Greek" title="Greek" style="border: 1px solid #151515;">
+Greek</a></li><li><a href="https://wger.de/csi/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-cs.svg" width="18" height="11" alt="Czech" title="Czech" style="border: 1px solid #151515;">
+Czech</a></li><li><a href="https://wger.de/svi/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-sv.svg" width="18" height="11" alt="Swedish" title="Swedish" style="border: 1px solid #151515;">
+Swedish</a></li><li><a href="https://wger.de/noi/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-no.svg" width="18" height="11" alt="Norwegian" title="Norwegian" style="border: 1px solid #151515;">
+Norwegian</a></li><li class="divider"></li><li><a href="https://www.transifex.com/rge/wger-workout-manager/"><span class="fa fa-plus fa-fw"></span>
+                                Translate
+                            </a></li></ul></div></div></div></div></header><nav id="nav"><div><div class="navbar navbar-inverse"><div class="container"><div class="navbar-header"><a class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#main-navbar-navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><div class="navbar-collapse collapse" id="main-navbar-navigation"><ul class="nav navbar-nav"><li><a href="https://wger.de/en/">
+                                
+                                    Features
+                                
+                            </a></li><li class="dropdown "><a href="https://wger.de/en/exercise/overview/" class="dropdown-toggle" data-toggle="dropdown">Exercises <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/exercise/overview/">Exercises</a></li><li><a href="https://wger.de/en/exercise/muscle/overview/">Muscle overview</a></li><li><a href="https://wger.de/en/exercise/equipment/overview">Equipment overview</a></li></ul></li><li class="dropdown active"><a href="https://wger.de/api/v2/exercise.api/?name/10minabs" class="dropdown-toggle" data-toggle="dropdown">About this software <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/software/features">Features</a></li><li><a href="https://wger.de/en/software/contribute">Contribute! </a></li><li><a href="https://wger.de/en/software/issues">Problems and wishes </a></li><li><a href="https://wger.de/en/software/terms-of-service">Terms of service </a></li><li class="divider"></li><li><a href="https://wger.de/en/software/api">REST API </a></li><li><a href="https://wger.de/en/software/license">License </a></li><li><a href="https://wger.readthedocs.io/"><span class="fa fa-external-link" aria-hidden="true"></span>
+                                        Developer documentation
+                                    </a></li><li><a href="https://github.com/wger-project/wger"><span class="fa fa-external-link" aria-hidden="true"></span>
+                                        Get the code (Github)
+                                    </a></li><li><a href="https://www.transifex.com/rge/wger-workout-manager/"><span class="fa fa-external-link" aria-hidden="true"></span>
+                                        Translate with Transifex
+                                    </a></li></ul></li><li class="dropdown visible-xs-block visible-sm-block"><a href="https://wger.de/api/v2/exercise.api/?name/10minabs" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/contact">Get in touch</a></li><li><a href="https://wger.de/en/about">About</a></li><li><a href="https://wger.de/api/v2/exercise.api/?name/10minabs#language-options" data-toggle="modal">Language</a></li></ul></li></ul><ul class="nav navbar-nav pull-right"><li class="divider-vertical"></li><li class="dropdown"><a href="https://wger.de/api/v2/exercise.api/?name/10minabs#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Login / Register
+                                    <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/user/login">Login</a></li><li><a href="https://wger.de/en/user/registration">Register</a></li><li><a href="https://wger.de/en/user/password/reset/">Reset password</a></li></ul></li></ul></div><!--/.nav-collapse --></div></div></div></nav><div id="main"><div class="container" style="padding-bottom: 1em;"><div class="modal fade" id="wger-ajax-info" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="padding-left: 0.5em;">×</button><h4 class="modal-title" id="ajax-info-title">Modal title</h4></div><div class="modal-body" id="ajax-info-content"></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div><div id="current-url" data-current-url="/api/v2/exercise.api/?name/10minabs"></div><div id="current-language" data-current-language="en"></div><style>
+  .shariff li { overflow: visible; }
+</style><div class="modal fade" id="shariffModal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Share this page</h4></div><div class="modal-body"><div class="shariff " data-lang="en"><ul class="theme-color orientation-horizontal col-4"><li class="shariff-button twitter"><a href="https://twitter.com/intent/tweet?text=REST%20API%20-%20Exercise%20List&amp;url=https%3A%2F%2Fwger.de%2Fapi%2Fv2%2Fexercise.api%2F%3Fname%2F10minabs" data-rel="popup" title="Share on Twitter" role="button" aria-label="Share on Twitter"><span class="fa fa-twitter"></span><span class="share_text">tweet</span></a></li><li class="shariff-button facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwger.de%2Fapi%2Fv2%2Fexercise.api%2F%3Fname%2F10minabs" data-rel="popup" title="Share on Facebook" role="button" aria-label="Share on Facebook"><span class="fa fa-facebook"></span><span class="share_text">share</span></a></li><li class="shariff-button googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwger.de%2Fapi%2Fv2%2Fexercise.api%2F%3Fname%2F10minabs" data-rel="popup" title="Share on Google+" role="button" aria-label="Share on Google+"><span class="fa fa-google-plus"></span><span class="share_text">share</span></a></li><li class="shariff-button info"><a href="http://ct.de/-2467514" target="_blank" title="more information" role="button" aria-label="more information"><span class="fa fa-info"></span><span class="share_text">Info</span></a></li></ul></div></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div><div class="row"><div class="col-sm-8"><h2 id="page-title" class="page-header">
+            REST API - Exercise List
+        </h2></div><div class="col-sm-4" style="padding-top: 15px; padding-bottom: 15px;"><div class="btn-group"><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#shariffModal"><span class="glyphicon glyphicon-retweet"></span>
+                    Share
+                </button></div></div></div><div class="row"><div class="col-sm-8" id="main-content"><ul class="breadcrumb"><li><a href="https://wger.de/en/software/api">Api Documentation</a></li><li><a href="https://wger.de/api/v2/">Api Root</a></li><li class="active">
+            
+                Exercise List
+            
+        </li></ul><div id="content"><form id="get-form" class="pull-right"><fieldset><div class="btn-group format-selection"><a class="btn btn-primary js-tooltip" href="https://wger.de/api/v2/exercise.api/?name/10minabs" rel="nofollow" title="Make a GET request on the Exercise List resource">GET</a><button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request"><span class="caret"></span></button><ul class="dropdown-menu"><li><a class="js-tooltip format-option" href="https://wger.de/api/v2/exercise.api/?format=json" rel="nofollow" title="Make a GET request on the Exercise List resource with the format set to `json`">json</a></li><li><a class="js-tooltip format-option" href="https://wger.de/api/v2/exercise.api/?format=api" rel="nofollow" title="Make a GET request on the Exercise List resource with the format set to `api`">api</a></li></ul></div></fieldset></form><form class="pull-right" action="https://wger.de/api/v2/exercise.api/?name/10minabs" method="POST" style="margin-right: 1em;"><input type="hidden" name="csrfmiddlewaretoken" value="ebPmZhO721Bjvb10UiRvF5jLKiRJVPqI"><input type="hidden" name="_method" value="OPTIONS"><button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Exercise List resource">OPTIONS</button></form><div class="clearfix"></div><div><!--<h4>Exercise List</h4>--><p></p><p>API endpoint for exercise objects</p><p></p><div class="request-info" style="clear: both"><pre class="prettyprint"><b><span class="pln">GET</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">api</span><span class="pun">/</span><span class="pln">v2</span><span class="pun">/</span><span class="pln">exercise</span><span class="pun">.</span><span class="pln">api</span><span class="pun">/?</span><span class="pln">name</span><span class="pun">/</span><span class="lit">10minabs</span></pre></div><div class="response-info"><pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b><b>Vary:</b><span class="lit">Accept</span><b>Content-Type:</b><span class="lit">application/json</span><b>Allow:</b><span class="lit">GET, POST, HEAD, OPTIONS</span></div><span class="pun">{</span><span class="pln">
+    </span><span class="str">"count"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">396</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"next"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"</span><a href="https://wger.de/api/v2/exercise.api/?page=2" rel="nofollow"><span class="str">https://wger.de/api/v2/exercise.api/?page=2</span></a><span class="str">"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"previous"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"results"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">436</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Andrew Carothers"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;1 Minute for each exercise&lt;/p&gt;\n&lt;ol&gt;\n&lt;li&gt;Hold feet 6 inches off ground&lt;/li&gt;\n&lt;li&gt;Crunches&lt;/li&gt;\n&lt;li&gt;Side Crunches (L)&lt;/li&gt;\n&lt;li&gt;Side Crunches (R)&lt;/li&gt;\n&lt;li&gt;Heel Touches&lt;/li&gt;\n&lt;li&gt;Plank Crunch&lt;/li&gt;\n&lt;li&gt;Scissor Kicks&lt;/li&gt;\n&lt;li&gt;Swim Kicks&lt;/li&gt;\n&lt;li&gt;V Crunches&lt;/li&gt;\n&lt;li&gt;Hold feet 6 in off ground&lt;/li&gt;\n&lt;/ol&gt;\n&lt;p&gt;Exercises can be substituted to vary workout&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"10 Min Abs"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"10 Min Abs"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2016-12-09"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3c5f6e1c-cb22-4a9f-a13e-d14afeb29175"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">345</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"deusinvictus"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Two Handed Russian Style Kettlebell swing&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2 Handed Kettlebell Swing"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2 Handed Kettlebell swing"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2015-08-03"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"c788d643-150a-4ac7-97ef-84643c6419bf"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">10</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">350</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Magenta"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;&lt;/p&gt;\n&lt;p&gt;60 secondi per ogni stazione, ripetere tutto 2 volte&lt;/p&gt;\n&lt;p&gt;1. gambe alte ferme, cercando di portare i glutei più vicino possibile al muro&lt;/p&gt;\n&lt;p&gt;2. portare la gamba destra \"ad ore 3\", quanto più largo possibile; la gamba sinistra è ferma in alto&lt;/p&gt;\n&lt;p&gt;3. portare la gamba sinistra \"ad ore 9\", quanto più largo possibile; la gamba destra&nbsp;è ferma in alto&lt;/p&gt;\n&lt;p&gt;4. partendo da posizione base, allargare entrabe le gambe il più possibile (per raggiungere le \"10 e 10\")&lt;/p&gt;\n&lt;p&gt;5. gambe piegate a rana e piedi appoggiati al muro (il lato destro del piede destro, per capirci, tocca il muro, viceversa&nbsp;per il sinistro): spingere con le mani in zona ginocchia verso il muro per avvicinarle&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Aalex Gambe Alte al Muro"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Aalex Gambe alte al muro"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2015-10-12"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"c6601887-047b-4964-a629-f0b912c838ca"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">174</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"flori"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;ul&gt;\n&lt;li&gt;in eine aufrechte Position setzen, bei der die Beine hüftbreit geöffnet sind&lt;/li&gt;\n&lt;li&gt;den Rücken, die Knie und die Oberschenkelaußenseite an die jeweiligen Polster pressen&lt;/li&gt;\n&lt;li&gt;mit den Händen an den Griffen festhalten&lt;/li&gt;\n&lt;li&gt;die Oberschenkel bis zum Anschlagpunkt der Hebelarme auseinander drücken&lt;/li&gt;\n&lt;li&gt;danach die Beine wieder zusammen führen&lt;/li&gt;\n&lt;li&gt;das Gesäß nicht vom Sitz abheben&lt;/li&gt;\n&lt;li&gt;beim Auseinanderdrücken der Hebelarme aus- und beim Zusammenführen einatmen&lt;/li&gt;\n&lt;/ul&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Abduktoren-Maschine"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Abduktoren-Maschine"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2013-07-19"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"99881bdd-43d7-4c3b-82ed-9c187d0455b7"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">6</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">11</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">223</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Marius"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Oberschenkel Innenseite!&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Adduktoren Maschine"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Adduktoren Maschine"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-02-26"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"e56d0a17-b1b8-427d-991e-97c530c7db6a"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">410</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"spacetowaste"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Opposite of hollow hold. Lie on stomach with arms and legs extended. See </span><a href="https://www.youtube.com/watch?v=44ScXWFaVBs&amp;amp=&amp;feature=youtu.be&amp;amp=&amp;t=7m51s%3C%2Fp%3E" rel="nofollow"><span class="str">https://www.youtube.com/watch?v=44ScXWFaVBs&amp;amp;feature=youtu.be&amp;amp;t=7m51s&lt;/p&gt;</span></a><span class="str">"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arch Hold"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arch Hold"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2016-07-31"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3ec8f0a8-339b-419f-b03d-f9e215834a63"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">434</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"johndoe"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Hallå du gamle indian, mår du bra?&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Armhävning"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Armhävning"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2016-11-13"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3019297c-7a14-4657-81bc-0a7478c41fb8"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">11</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">433</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"johndoe"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Armhävning, inte så jäkla komplicerat&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Armhävning"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Armhävning"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2016-11-13"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"bc9e4d85-d7e5-4194-8489-26fc1560c1d2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">11</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">228</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"bloody_disgrace"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Zwei Kurzhanteln mit den Handflächen nach innen vor der Brust halten, Ellbogen unterhalb der Handgelenke.&lt;/p&gt;\n&lt;p&gt;Ellbogen nach außen bringen und Hanteln über den Kopf heben. Drehung kommt aus dem Ellbogen, nicht aus den Armen!&lt;/p&gt;\n&lt;p&gt;Wenn die Arme durchgestreckt sind, die gleiche Bewegung rückwärts ausführen.&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arnold Press"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arnold Press"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-03-09"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"880bff63-6798-4ffc-a818-b2a1ccfec0f7"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">13</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">5</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">227</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"trzr23"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Very common shoulder exercise.&lt;/p&gt;\n&lt;p&gt;&nbsp;&lt;/p&gt;\n&lt;p&gt;As shown here:&nbsp;</span><a href="https://www.youtube.com/watch?v=vj2w851ZHRM%3C%2Fp%3E" rel="nofollow"><span class="str">https://www.youtube.com/watch?v=vj2w851ZHRM&lt;/p&gt;</span></a><span class="str">"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arnold Shoulder Press"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Arnold Shoulder Press"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-03-09"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"53ca25b3-61d9-4f72-bfdb-492b83484ff5"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">13</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">352</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Tetsuhiko Asai"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;ol&gt;\n&lt;li&gt;single leg sit and stand&lt;/li&gt;\n&lt;/ol&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Asai Squad"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Asai Squad"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2015-10-22"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"bad296f4-35a5-4125-ae3f-0187f45945e2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">10</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">353</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Tetsuhiko Asai"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;ol&gt;\n&lt;li&gt;single leg sit and stand&lt;/li&gt;\n&lt;/ol&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Asai Squad"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Asai Squad"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2015-10-22"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"583281c7-2362-48e7-95d5-8fd6c455e0fb"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">10</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;.&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritte im Gehen"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritte im Gehen"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"5675ae61-6597-4806-ae5c-2dda5a5ac03c"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">10</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">55</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;.&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritte Stehend"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritte stehend"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"27301836-ed7f-4510-83e7-66c0b8041a44"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">10</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">135</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">""</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritt Trizepsdrücken ü. Kopf, ß-Stange"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ausfallschritt Trizepsdrücken ü. Kopf, ß-Stange"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"c8d08cbd-d406-4ce0-b1b9-10b236272d30"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">5</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">289</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"GrosseHund"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Grab dumbbells and extend arms to side and hold as long as you can&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Axe Hold"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"axe hold"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-11-02"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"6add5973-86d0-4543-928a-6bb8b3f34efc"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">9</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">9</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">38</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife nun die Stange mit einem engen Griff (nicht mehr als 20cm.). Führe nun das Gewicht so weit nach unten, bis die Oberarme paralell zum Boden sind, gehe dann wieder nach obern. Bringe die Stange nicht wie beim (breiten) Bankdrücken auf Brusthöhe runter, sondern weiter unten. Auf der tiefsten Stelle sollten deine Arme einen rechten Winkel machen.&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken Eng"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken eng"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"4def60e7-ed8d-4a9d-bf76-ceb15ecf9779"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">5</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">4</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">1</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">77</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Der Bewegungsablauf ist ähnlich zur Übung mit einer Langhantel.&lt;/p&gt;\n&lt;p&gt;Nehme die Gewichte in die Hände und lege dich auf die Bank. Halte die Hanteln neben der Brust auf Brustwarzenhöhe und drücke sie nun nach oben, bis die Arme ausgestreckt sind. Lasse die Gewichte nun langsam und kontrolliert runter.&lt;/p&gt;\n&lt;p&gt;&nbsp;&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken KH"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken KH"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"06450bcb-03a8-4bd7-8349-ef677ee57ea3"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">11</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">4</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">5</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">8</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">3</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"wger.de"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Lege dich auf die Bank, die Stange direkt über die Augen, die Knie etwas angewinkelt und die Füße fest auf dem Boden. Greife die Stange breit und lasse sie langsam und kontrolliert runter, dabei sollte die Stange kurz auf Brustwarzenhöhe den Körper berühren. Dann das Gewicht wieder hochdrücken bis die Arme durchgestreckt sind.&lt;/p&gt;\n&lt;p&gt;Bei hohem Gewicht, empfielt sich natürlich einen &lt;em&gt;Spotter&lt;/em&gt; zu haben, der einen hilft falls man die Stange nicht alleine hochdrücken kann.&lt;/p&gt;\n&lt;p&gt;Mit der Breite des Griffs kann außerdem kontrolliert werden, welcher Bereich der Brust stärker belastet wird:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;breiter Griff: äußere Brustmuskeln&lt;/li&gt;\n&lt;li&gt;enger Griff: innere Brustmuskeln und Trizeps&lt;/li&gt;\n&lt;/ul&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken LH"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Bankdrücken LH"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"198dcb2e-e35f-4b69-ae8b-e1124d438eae"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">11</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">4</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">5</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">8</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">343</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license_author"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"sevae"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"status"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"description"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"&lt;p&gt;Place a barbell on the floor at your feet.&lt;/p&gt;\n&lt;p&gt;Bending at the waist, grip the barbell with a shoulder with overhand grip.&lt;/p&gt;\n&lt;p&gt;With a slow controlled motion, roll the bar out so that your back is straight.&lt;/p&gt;\n&lt;p&gt;Roll back up raising your hips and butt as you return to the starting position.&lt;/p&gt;"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barbell Ab Rollout"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"name_original"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Barbell Ab Rollout"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"creation_date"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2015-07-27"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"uuid"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"1b9dc5bc-790b-4e21-a55d-f8b3115e94c5"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"license"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"category"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"language"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"muscles"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">14</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">6</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"muscles_secondary"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                </span><span class="lit">12</span><span class="pln">
+            </span><span class="pun">],</span><span class="pln">
+            </span><span class="str">"equipment"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                </span><span class="lit">1</span><span class="pln">
+            </span><span class="pun">]</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></pre></div></div></div></div><div class="col-sm-4" id="main-sidebar"><h4>Info</h4><p>This live browsing view was copied and adapted from
+    <a href="http://www.django-rest-framework.org/">Django REST framework</a>,
+    who also powers the API behind the scenes.
+</p></div></div></div></div><footer id="main-footer"><div class="container"><a href="https://github.com/wger-project/wger" class="no-hover"><img src="./REST API - Exercise List_files/agpl-v3.svg" width="88" height="31" alt="Released under the Affero GPL" title="Released under the Affero GPL"></a><a href="https://wger.de/en/about">About</a>
+        | <a href="https://wger.de/en/software/contribute">Contribute!</a>
+        | <a href="https://wger.de/en/contact">Get in touch</a>
+        | <a href="https://wger.de/en/software/terms-of-service">Terms of service</a><div class="navbar-right"><em class="text-muted" style="font-size: 80%;">1.8a3-dev</em></div></div></footer><script src="./REST API - Exercise List_files/include.js" type="text/javascript"></script><!-- Piwik --><script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u="https://piwik.wger.de/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script><!-- End Piwik Code --><script src="./REST API - Exercise List_files/shariff.min.js"></script>
+
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script></body></html>
