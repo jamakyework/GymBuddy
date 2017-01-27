@@ -21,68 +21,66 @@
                 <h1 class="tron-text">GymBuddy</h1>
             </div>
         </div>
-        <div class="container-fluid">
-            <h1>View Workout</h1>
-            <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
-                <div>
+        <h1> View Workout </h1>
+        <div class="container-fluid" ng-repeat='workout in workouts'>
+            <div>
+                <h1>{{workout.name}} Workout</h1>
+            </div>
+            <!-- <div>
                     <img ng-src="{{workout.imageUrl}}" height= 200px width= 200px/>
+                </div> -->
+            <div>
+                Workout Description: {{workout.description}}
+            </div>
+            <div ng-repeat='exercise in workout.exercise track by $index'>
+                <div>
+                    <img ng-src="{{exercise.imageUrl}}" height=2 00px width=2 00px/>
                 </div>
                 <div>
-                   Workout Name: {{workout.name}}
+                    Exercise Name: {{exercise.name}}
                 </div>
                 <div>
-                  Description: {{workout.description}}
+                    Exercise Description: {{exercise.description}}
                 </div>
-                <div ng-repeat='exercise in workout.exercise track by $index'>
-                    <div>
-                    <img ng-src="{{exercise.imageUrl}}"  height= 200px width= 200px/>
-                  </div>
-                  <div>
-                  Exercise Name: {{exercise.name}}
+            </div>
+            <input class="btn btn-default" type="button" name="createExercise" value="New Exercise" ng-click="createExercise()">
+            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="addToWorkout" value="Add Existing Exercise" ng-model="viewExercise" ng-click="viewExercise()">
+
+            <!-- exercise  modal begin -->
+            <div id="exerciseModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Exercise</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
+                                <div>
+                                    <img ng-src="{{exercise.imageUrl}}" height=2 00px width=2 00px/>
+                                </div>
+                                <div>
+                                    {{exercise.name}}
+                                </div>
+                                <div>
+                                    {{exercise.description}}
+                                </div>
+                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout(exercise)" value="Add To Workout" />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  Exercise Description: {{exercise.description}}
-                </div>
-                </div>
-                <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="addToWorkout"
-                value="Select Exercise" ng-model="viewExercise" ng-click="viewExercise()">
-                <input class="btn btn-default" type="button" name="createExercise" value="Add  New Exercise" ng-click="createExercise()">
-<!-- <div ng-controller="getStartedController"> -->
-              <!-- exercise  modal begin -->
-              <div id="exerciseModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title">Exercise</h4>
-                          </div>
-                          <div class="modal-body">
-                              <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
-                                  <div>
-                                      <img ng-src="{{exercise.imageUrl}}"  height= 200px width= 200px/>
-                                  </div>
-                                  <div>
-                                      {{exercise.name}}
-                                  </div>
-                                  <div>
-                                      {{exercise.description}}
-                                  </div>
-                                  <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout(exercise)" value="Add To Workout"/>
-                              </div>
-                          </div>
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-<!-- </div> -->
+            </div>
             <div class="footer">
-            <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home"/>
-          </div>
-          </div>
+                <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home" />
+            </div>
         </div>
- </body>
+    </div>
+</body>
+
 </html>
 
 <!-- clicking select  under workout would bring you to this page -->
@@ -138,4 +136,4 @@
 <p> List of Exercises for this day </p>
 </div>
 </div> -->
-    <!-- Tabs End -->
+<!-- Tabs End -->

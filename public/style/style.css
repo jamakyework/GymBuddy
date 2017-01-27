@@ -1,10 +1,14 @@
 body {
-    background-color: #404040;
-    color: white;
+    background-color: #404040 !important;
+    color: white !important;
 }
 
 div {
   display: block;
+}
+
+.register{
+  color:#800000;
 }
 
 .jumbotron.jumbotron-fluid.text-center {
@@ -23,9 +27,22 @@ div {
 .modalRepeat {
     display: block;
     color: #AA3939;
-    background-color: #a6a6a6;
+    /*background-color: #a6a6a6 !important;*/
+    /*background-color: #404040 !important;*/
 }
 
+.modal-title {
+  color: grey !important;
+}
+
+ .btn.btn-default.btn-lg.btn-block.navbar-btn {
+   color: white !important;
+   background: #800000 !important;
+ }
+
+btn.btn-default.navbar-btn {
+  text-align: center;
+}
 
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */

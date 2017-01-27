@@ -22,6 +22,7 @@
             </div>
         </div>
         <div class="container-fluid">
+
             <!-- Create Workout Btn -->
             <label for="Create Workout"></label>
             <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="createWorkout" value="Create Workout" ng-model="createWorkout" ng-click="createWorkout()" />
@@ -33,6 +34,7 @@
             <!-- View Workout Btn -->
             <label for="View Workout"></label>
             <input data-toggle="modal" data-target="#workoutModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()" />
+
             <!-- workout  modal begin -->
             <div id="workoutModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -105,7 +107,7 @@
 
             <!-- end  div container -->
             <label for="Log Out"></label>
-            <input class="btn btn-danger btn-lg btn-block navbar-btn" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()" />
+            <input class="btn btn-default btn-lg navbar-btn" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()" />
         </div>
     </div>
     </div>
