@@ -25,7 +25,7 @@
             <h1>View Workout</h1>
             <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
                 <div>
-                    <img ng-src="{{workout.imageUrl}}" height= 300px width= 300x/>
+                    <img ng-src="{{workout.imageUrl}}" height= 200px width= 200px/>
                 </div>
                 <div>
                    Workout Name: {{workout.name}}
@@ -35,7 +35,7 @@
                 </div>
                 <div ng-repeat='exercise in workout.exercise track by $index'>
                     <div>
-                    <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                    <img ng-src="{{exercise.imageUrl}}"  height= 200px width= 200px/>
                   </div>
                   <div>
                   Exercise Name: {{exercise.name}}
@@ -59,7 +59,7 @@
                           <div class="modal-body">
                               <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
                                   <div>
-                                      <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                                      <img ng-src="{{exercise.imageUrl}}"  height= 200px width= 200px/>
                                   </div>
                                   <div>
                                       {{exercise.name}}

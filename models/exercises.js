@@ -6,11 +6,8 @@ var exerciseSchema = new Schema({
   name: String,
   description: String,
   imageUrl:String,
-  workout: []
 });
 
 var exercises = mongoose.model('exercises', exerciseSchema);
 
 module.exports = exercises;
-
-//will need schema of exercises

@@ -253,7 +253,7 @@ myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
         $scope.addToWorkout  = function(exercise) {
         console.log("in addExercise");
         console.log("$scope.workouts", $scope.workouts );
-        var addExercise = {exercise: exercise, workout_id: $scope.workouts[5]._id};
+        var addExercise = {exercise: exercise, workout_id: $scope.workouts[0]._id};
         console.log("addExercise:", addExercise);
         // var exercise = {exercise};
         // workoutFactory.addExercise(exercise);
