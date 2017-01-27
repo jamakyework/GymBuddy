@@ -33,7 +33,7 @@
                 <div>
                   Description: {{workout.description}}
                 </div>
-                <div ng-repeat='exercise in workout.exercise'>
+                <div ng-repeat='exercise in workout.exercise track by $index'>
                     <div>
                     <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
                   </div>
@@ -43,10 +43,10 @@
                 <div>
                   Exercise Description: {{exercise.description}}
                 </div>
+                </div>
                 <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="addToWorkout"
                 value="Select Exercise" ng-model="viewExercise" ng-click="viewExercise()">
-                <!-- <input class="btn btn-default" type="button" name="createExercise" value="Add  New Exercise" ng-click="createExercise()"> -->
-              </div>
+                <input class="btn btn-default" type="button" name="createExercise" value="Add  New Exercise" ng-click="createExercise()">
 <!-- <div ng-controller="getStartedController"> -->
               <!-- exercise  modal begin -->
               <div id="exerciseModal" class="modal fade" role="dialog">

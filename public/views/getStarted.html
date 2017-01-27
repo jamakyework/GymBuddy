@@ -44,7 +44,7 @@
                         <div class="modal-body">
                             <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
                                 <div>
-                                    <img ng-src="{{workout.imageUrl}}" height= 300px width= 300x/>
+                                    <img ng-src="{{workout.imageUrl}}" height= 300px width= 300px/>
                                 </div>
                                 <div>
                                     {{workout.name}}
@@ -67,8 +67,7 @@
 
             <!-- View Exercise Btn -->
             <label for="View Exercise"></label>
-            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn"
-            type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()"/>
+            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="viewExercise" value="View Exercise" ng-model="viewExercise" ng-click="viewExercise()" />
             <!-- exercise  modal begin -->
             <div id="exerciseModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -80,7 +79,7 @@
                         <div class="modal-body">
                             <div class="modalRepeat container-fluid" ng-repeat='exercise in exercises'>
                                 <div>
-                                    <img ng-src="{{exercise.imageUrl}}"  height= 300px width= 300px/>
+                                    <img ng-src="{{exercise.imageUrl}}" height= 300px width= 300px/>
                                 </div>
                                 <div>
                                     {{exercise.name}}
@@ -105,8 +104,8 @@
             <input class="btn btn-default btn-lg btn-block navbar-btn" type="button" name="searchForExercise" value="Search For Exercise" ng-model="searchForExercise" ng-click="searchForExercise()" />
 
             <!-- end  div container -->
-        <label for="Log Out"></label>
-        <input class="btn btn-danger btn-lg btn-block navbar-btn" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()"/>
+            <label for="Log Out"></label>
+            <input class="btn btn-danger btn-lg btn-block navbar-btn" type="button" name="logout" value="Logout" ng-model="logout" ng-click="logout()" />
         </div>
     </div>
     </div>
