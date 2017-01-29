@@ -185,27 +185,27 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
             });
         }; // end addWorkout
 
-        $scope.showConfirm = function() {
-
-            var confirmPopup = confirm({
-                title: 'Select Option',
-                template: 'Please select your next step'
-            });
-
-            confirmPopup.then(function(res) {
-                    if (res) {
-                        // Code to be executed on pressing ok or positive response
-                        // Something like remove item from list
-                        $scope.viewWorkout();
-                    }
-                }
-                else
-                {
-                  // Code to be executed on pressing cancel or negative response
-                  $window.location.reload();
-                }
-              }
-            );
+        // $scope.showConfirm = function() {
+        //
+        //     var confirmPopup = confirm({
+        //         title: 'Select Option',
+        //         template: 'Please select your next step'
+        //     });
+        //
+        //     confirmPopup.then(function(res) {
+        //             if (res) {
+        //                 // Code to be executed on pressing ok or positive response
+        //                 // Something like remove item from list
+        //                 $scope.viewWorkout();
+        //             }
+        //         }
+        //         else
+        //         {
+        //           // Code to be executed on pressing cancel or negative response
+        //           $window.location.reload();
+        //         }
+        //       }
+        //     );
 
 
 
