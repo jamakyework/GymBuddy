@@ -15,13 +15,16 @@
 </head>
 
 <body ng-app="myApp">
-    <div ng-controller="getStartedController">
+    <div ng-controller="getStartedController" ng-init= 'username();'>
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
                 <h1 class="tron-text">GymBuddy</h1>
             </div>
         </div>
         <div class="container-fluid">
+          <div>
+              <h4>Welcome {{username}}</h4>
+            </div>
 
             <!-- Create Workout Btn -->
             <label for="Create Workout"></label>

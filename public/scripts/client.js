@@ -79,6 +79,20 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
     function($scope, $http, $window, $workoutFactory) {
         console.log('in getStartedController');
 
+        $scope.username = function() {
+          $http({
+              method: 'GET',
+              url: '/username',
+          }).then(function successCallback(response) {
+              console.log("response:", response);
+              $scope.username = response.data.username;
+              console.log("$scope.username:", response.data.username);
+          });
+          function errorCallback(error) {
+              console.log('error', error);
+          }
+      };
+      
         $scope.createWorkout = function() {
             $window.location.href = '/workout';
         };

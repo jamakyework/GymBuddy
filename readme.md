@@ -154,7 +154,8 @@ Story of Gym Buddy
 * [x] I want user to only be able to view their specific exercises
 * [x] I want click to view/exercises and display in modal window
 * [x] css for modal
-[/]make a page for redirect to unauthorized (403 page)(currently redirects to login if unauthorized)
+* [x] Indicate who is logged in
+* [/]make a page for redirect to unauthorized (403 page)(currently redirects to login if unauthorized)
 
 
 ##To Do:
@@ -164,7 +165,7 @@ Story of Gym Buddy
 
 ##Do Now:
 ---------
-[] Indicate who is logged in
+
 change to indicate that workout/exercise has been saved(so maybe an alert(sweet alerts?))
 Delete Exercise/Workout Btn
 No Result notification for API search
