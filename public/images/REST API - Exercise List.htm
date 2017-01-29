@@ -24,9 +24,9 @@
     </script><title>REST API - Exercise List</title></head><body><header><div class="container"><div class="row"><div class="col-md-9" style="padding-bottom: 0.5em;"><span class="name">wger</span><span class="regular">| Workout Manager</span></div><div class="col-md-3"><a href="https://wger.de/en/contact">Get in touch</a>
                 |
 
-                
-                
-                
+
+
+
                 <div class="btn-group"><button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown"><img src="./REST API - Exercise List_files/flag-en.svg" width="18" height="11" alt="English" title="English" style="border: 1px solid #151515;">
                         English <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><a href="https://wger.de/eni/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-en.svg" width="18" height="11" alt="English" title="English" style="border: 1px solid #151515;">
 English</a></li><li><a href="https://wger.de/dei/v2/exercise.api/?name/10minabs"><img src="./REST API - Exercise List_files/flag-de.svg" width="18" height="11" alt="German" title="German" style="border: 1px solid #151515;">
@@ -42,9 +42,9 @@ Swedish</a></li><li><a href="https://wger.de/noi/v2/exercise.api/?name/10minabs"
 Norwegian</a></li><li class="divider"></li><li><a href="https://www.transifex.com/rge/wger-workout-manager/"><span class="fa fa-plus fa-fw"></span>
                                 Translate
                             </a></li></ul></div></div></div></div></header><nav id="nav"><div><div class="navbar navbar-inverse"><div class="container"><div class="navbar-header"><a class="navbar-toggle hidden-xs" data-toggle="collapse" data-target="#main-navbar-navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div><div class="navbar-collapse collapse" id="main-navbar-navigation"><ul class="nav navbar-nav"><li><a href="https://wger.de/en/">
-                                
+
                                     Features
-                                
+
                             </a></li><li class="dropdown "><a href="https://wger.de/en/exercise/overview/" class="dropdown-toggle" data-toggle="dropdown">Exercises <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/exercise/overview/">Exercises</a></li><li><a href="https://wger.de/en/exercise/muscle/overview/">Muscle overview</a></li><li><a href="https://wger.de/en/exercise/equipment/overview">Equipment overview</a></li></ul></li><li class="dropdown active"><a href="https://wger.de/api/v2/exercise.api/?name/10minabs" class="dropdown-toggle" data-toggle="dropdown">About this software <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="https://wger.de/en/software/features">Features</a></li><li><a href="https://wger.de/en/software/contribute">Contribute! </a></li><li><a href="https://wger.de/en/software/issues">Problems and wishes </a></li><li><a href="https://wger.de/en/software/terms-of-service">Terms of service </a></li><li class="divider"></li><li><a href="https://wger.de/en/software/api">REST API </a></li><li><a href="https://wger.de/en/software/license">License </a></li><li><a href="https://wger.readthedocs.io/"><span class="fa fa-external-link" aria-hidden="true"></span>
                                         Developer documentation
                                     </a></li><li><a href="https://github.com/wger-project/wger"><span class="fa fa-external-link" aria-hidden="true"></span>
@@ -60,9 +60,9 @@ Norwegian</a></li><li class="divider"></li><li><a href="https://www.transifex.co
         </h2></div><div class="col-sm-4" style="padding-top: 15px; padding-bottom: 15px;"><div class="btn-group"><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#shariffModal"><span class="glyphicon glyphicon-retweet"></span>
                     Share
                 </button></div></div></div><div class="row"><div class="col-sm-8" id="main-content"><ul class="breadcrumb"><li><a href="https://wger.de/en/software/api">Api Documentation</a></li><li><a href="https://wger.de/api/v2/">Api Root</a></li><li class="active">
-            
+
                 Exercise List
-            
+
         </li></ul><div id="content"><form id="get-form" class="pull-right"><fieldset><div class="btn-group format-selection"><a class="btn btn-primary js-tooltip" href="https://wger.de/api/v2/exercise.api/?name/10minabs" rel="nofollow" title="Make a GET request on the Exercise List resource">GET</a><button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request"><span class="caret"></span></button><ul class="dropdown-menu"><li><a class="js-tooltip format-option" href="https://wger.de/api/v2/exercise.api/?format=json" rel="nofollow" title="Make a GET request on the Exercise List resource with the format set to `json`">json</a></li><li><a class="js-tooltip format-option" href="https://wger.de/api/v2/exercise.api/?format=api" rel="nofollow" title="Make a GET request on the Exercise List resource with the format set to `api`">api</a></li></ul></div></fieldset></form><form class="pull-right" action="https://wger.de/api/v2/exercise.api/?name/10minabs" method="POST" style="margin-right: 1em;"><input type="hidden" name="csrfmiddlewaretoken" value="ebPmZhO721Bjvb10UiRvF5jLKiRJVPqI"><input type="hidden" name="_method" value="OPTIONS"><button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Exercise List resource">OPTIONS</button></form><div class="clearfix"></div><div><!--<h4>Exercise List</h4>--><p></p><p>API endpoint for exercise objects</p><p></p><div class="request-info" style="clear: both"><pre class="prettyprint"><b><span class="pln">GET</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">api</span><span class="pun">/</span><span class="pln">v2</span><span class="pun">/</span><span class="pln">exercise</span><span class="pun">.</span><span class="pln">api</span><span class="pun">/?</span><span class="pln">name</span><span class="pun">/</span><span class="lit">10minabs</span></pre></div><div class="response-info"><pre class="prettyprint"><div class="meta nocode"><b>HTTP 200 OK</b><b>Vary:</b><span class="lit">Accept</span><b>Content-Type:</b><span class="lit">application/json</span><b>Allow:</b><span class="lit">GET, POST, HEAD, OPTIONS</span></div><span class="pun">{</span><span class="pln">
     </span><span class="str">"count"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">396</span><span class="pun">,</span><span class="pln">
     </span><span class="str">"next"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"</span><a href="https://wger.de/api/v2/exercise.api/?page=2" rel="nofollow"><span class="str">https://wger.de/api/v2/exercise.api/?page=2</span></a><span class="str">"</span><span class="pun">,</span><span class="pln">

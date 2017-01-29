@@ -96,7 +96,9 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
                 console.log("response:", response);
                 $scope.workouts = response.data;
                 console.log("$scope.workouts:", $scope.workouts);
-            }); function errorCallback(error) {
+            });
+
+            function errorCallback(error) {
                 console.log('error', error);
             }
         };
@@ -117,7 +119,9 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
                 console.log("response:", response);
                 $scope.exercises = response.data;
                 console.log("$scope.exercises:", $scope.exercises);
-            }); function errorCallback(error) {
+            });
+
+            function errorCallback(error) {
                 console.log('error', error);
             }
         };
@@ -145,9 +149,10 @@ myApp.controller('getStartedController', ['$scope', '$http', '$window', 'workout
             }, function errorCallback(error) {
                 console.log('error', error);
             });
-          };
+        };
 
-}]); //end getStartedController
+    }
+]); //end getStartedController
 
 
 myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'workoutFactory',
@@ -173,12 +178,36 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
                 data: newWorkout
             }).then(function successCallback(response) {
                 console.log('success', response);
-                alert("Workout added successfully");
-                $window.location.reload();
+                // confirm("Workout added successfully"); //
+                //   $window.location.reload(); //
             }, function errorCallback(error) {
                 console.log('error occurred!');
             });
-        };// end addWorkout
+        }; // end addWorkout
+
+        $scope.showConfirm = function() {
+
+            var confirmPopup = confirm({
+                title: 'Select Option',
+                template: 'Please select your next step'
+            });
+
+            confirmPopup.then(function(res) {
+                    if (res) {
+                        // Code to be executed on pressing ok or positive response
+                        // Something like remove item from list
+                        $scope.viewWorkout();
+                    }
+                }
+                else
+                {
+                  // Code to be executed on pressing cancel or negative response
+                  $window.location.reload();
+                }
+              }
+            );
+
+
 
         $scope.viewWorkout = function() {
             $scope.workouts = [];
@@ -189,10 +218,12 @@ myApp.controller('createWorkoutController', ['$scope', '$http', '$window', 'work
                 console.log("response:", response);
                 $scope.workouts = response.data;
                 console.log("$scope.workouts:", $scope.workouts);
-            }); function errorCallback(error) {
+            });
+
+            function errorCallback(error) {
                 console.log('error', error);
             }
-        };//end viewWorkout
+        }; //end viewWorkout
 
         $scope.setActive = function(index) {
             console.log('this.workout:', this.workout);
@@ -239,7 +270,9 @@ myApp.controller('createExerciseController', ['$scope', '$http', '$window',
                 console.log("response:", response);
                 $scope.exercises = response.data;
                 console.log("$scope.exercises:", $scope.exercises);
-            }); function errorCallback(error) {
+            });
+
+            function errorCallback(error) {
                 console.log('error', error);
             }
         };
@@ -250,6 +283,9 @@ myApp.controller('createExerciseController', ['$scope', '$http', '$window',
             sessionStorage.setItem("selectedExerciseId", this.exercise._id);
             $window.location.href = '/viewExercise';
         };
+
+
+
 
     }
 ]);
@@ -277,6 +313,7 @@ myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
                 $scope.workouts = response.data;
                 console.log("$scope.workouts:", $scope.workouts);
             });
+
             function errorCallback(error) {
                 console.log('error', error);
             }
@@ -291,93 +328,99 @@ myApp.controller('viewWorkoutController', ['$scope', '$http', '$window',
                 console.log("response:", response);
                 $scope.exercises = response.data;
                 console.log("$scope.exercises:", $scope.exercises);
-            }); function errorCallback(error) {
+            });
+
+            function errorCallback(error) {
                 console.log('error', error);
             }
         };
 
-        $scope.addToWorkout  = function(exercise) {
-        console.log("in addExercise");
-        console.log("$scope.workouts", $scope.workouts );
-        var addExercise = {exercise: exercise, workout_id: $scope.workouts[0]._id};
-        console.log("addExercise:", addExercise);
-        // var exercise = {exercise};
-        // workoutFactory.addExercise(exercise);
-        $http({
-            method: 'PUT',
-            url: '/addExerciseToWorkout',
-            data: addExercise
-        }).then(function successCallback(response) {
-            console.log('success', response);
-            $window.location.reload();
-        }, function errorCallback(error) {
-            console.log('error occurred!');
-        });
-      };
+        $scope.addToWorkout = function(exercise) {
+            console.log("in addExercise");
+            console.log("$scope.workouts", $scope.workouts);
+            var addExercise = {
+                exercise: exercise,
+                workout_id: $scope.workouts[0]._id
+            };
+            console.log("addExercise:", addExercise);
+            // var exercise = {exercise};
+            // workoutFactory.addExercise(exercise);
+            $http({
+                method: 'PUT',
+                url: '/addExerciseToWorkout',
+                data: addExercise
+            }).then(function successCallback(response) {
+                console.log('success', response);
+                $window.location.reload();
+            }, function errorCallback(error) {
+                console.log('error occurred!');
+            });
+        };
 
-      //   $scope.addToWorkout = function() {
-      //   console.log("in addExercise");
-      //   console.log("$scope.workouts", $scope.workouts );
-      //   console.log("$scope.exercises", $scope.exercises );
-      //   var exercise = sessionStorage.getItem('selectedExerciseId');
-      //   workoutFactory.addExercise(exercise);
-      //   $http({
-      //       method: 'POST',
-      //       url: '/addWorkout',
-      //       data: exercise
-      //   }).then(function successCallback(response) {
-      //       console.log('success', response);
-      //       $window.location.reload();
-      //   }, function errorCallback(error) {
-      //       console.log('error occurred!');
-      //   });
-      // };
-      //
-      // $scope.addToWorkout = function() {
-      //   console.log("in addExercise");
-      //   var exercise = sessionStorage.getItem('selectedExerciseId');
-      //   console.log("selectedExerciseId:", exercise);
-      //     var addExercise = $scope.exercises.workout.push(exercise);
-      //     console.log("$scope.workouts", $scope.workouts );
-      //     console.log("$scope.exercises", $scope.exercises );
-      //     console.log("$scope.exercises[0]", $scope.exercises[0].workout);
-      //   $http({
-      //       method: 'PUT',
-      //       url: '/addExerciseToWorkout',
-      //       data: addExercise
-      //   }).then(function successCallback(response) {
-      //       console.log('success', response);
-      //       $window.location.reload();
-      //   }, function errorCallback(error) {
-      //       console.log('error occurred!');
-      //   });
-      // };
-      //
-      // $scope.addToExercise = function() {
-      //   console.log("in addExercise");
-      //   console.log("$scope.workouts", $scope.workouts );
-      //   console.log("$scope.exercises", $scope.exercises );
-      //   var exercise = sessionStorage.getItem('selectedExerciseId');
-      //   console.log("selectedExerciseId:", exercise);
-      //   $http({
-      //       method: 'PUT',
-      //       url: '/addWorkoutToExercise',
-      //       data: exercise
-      //   }).then(function successCallback(response) {
-      //       console.log('success', response);
-      //       $window.location.reload();
-      //   }, function errorCallback(error) {
-      //       console.log('error occurred!');
-      //   });
-      // };
+        //   $scope.addToWorkout = function() {
+        //   console.log("in addExercise");
+        //   console.log("$scope.workouts", $scope.workouts );
+        //   console.log("$scope.exercises", $scope.exercises );
+        //   var exercise = sessionStorage.getItem('selectedExerciseId');
+        //   workoutFactory.addExercise(exercise);
+        //   $http({
+        //       method: 'POST',
+        //       url: '/addWorkout',
+        //       data: exercise
+        //   }).then(function successCallback(response) {
+        //       console.log('success', response);
+        //       $window.location.reload();
+        //   }, function errorCallback(error) {
+        //       console.log('error occurred!');
+        //   });
+        // };
+        //
+        // $scope.addToWorkout = function() {
+        //   console.log("in addExercise");
+        //   var exercise = sessionStorage.getItem('selectedExerciseId');
+        //   console.log("selectedExerciseId:", exercise);
+        //     var addExercise = $scope.exercises.workout.push(exercise);
+        //     console.log("$scope.workouts", $scope.workouts );
+        //     console.log("$scope.exercises", $scope.exercises );
+        //     console.log("$scope.exercises[0]", $scope.exercises[0].workout);
+        //   $http({
+        //       method: 'PUT',
+        //       url: '/addExerciseToWorkout',
+        //       data: addExercise
+        //   }).then(function successCallback(response) {
+        //       console.log('success', response);
+        //       $window.location.reload();
+        //   }, function errorCallback(error) {
+        //       console.log('error occurred!');
+        //   });
+        // };
+        //
+        // $scope.addToExercise = function() {
+        //   console.log("in addExercise");
+        //   console.log("$scope.workouts", $scope.workouts );
+        //   console.log("$scope.exercises", $scope.exercises );
+        //   var exercise = sessionStorage.getItem('selectedExerciseId');
+        //   console.log("selectedExerciseId:", exercise);
+        //   $http({
+        //       method: 'PUT',
+        //       url: '/addWorkoutToExercise',
+        //       data: exercise
+        //   }).then(function successCallback(response) {
+        //       console.log('success', response);
+        //       $window.location.reload();
+        //   }, function errorCallback(error) {
+        //       console.log('error occurred!');
+        //   });
+        // };
 
 
-    }]);
+    }
+]);
 
 
 myApp.controller('viewExerciseController', ['$scope', '$http', '$window',
     function($scope, $http, $window) {
-      console.log('viewExerciseController, selected workout id:', sessionStorage.getItem('selectedExerciseId'));
+        console.log('viewExerciseController, selected workout id:', sessionStorage.getItem('selectedExerciseId'));
         $scope.home = function() {
             $window.location.href = '/getStarted';
         };
@@ -392,12 +435,14 @@ myApp.controller('viewExerciseController', ['$scope', '$http', '$window',
                 $scope.exercises = response.data;
                 console.log("$scope.exercises:", $scope.exercises);
             });
+
             function errorCallback(error) {
                 console.log('error', error);
             }
         };
 
-}]); //end view exercise conroller
+    }
+]); //end view exercise conroller
 
 
 //connect to API

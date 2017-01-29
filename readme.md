@@ -137,6 +137,7 @@ Story of Gym Buddy
 []  add modal change when option is selected
 [] add delete exercise button
 [] add delete workout
+[] confirm password option
 
 
 ##Completed
@@ -162,12 +163,12 @@ Story of Gym Buddy
 
 ##Do Now:
 ---------
-Delete Exercise/Workout Btn
-Sanitize API data
-(api/v2/exercise/?language)
-No Result option for API search
 Indicate who is logged in
 change to indicate that workout/exercise has been saved(so maybe an alert(sweet alerts?))
+Delete Exercise/Workout Btn
+No Result notification for API search
+Play with/ Sanitize API data
+(api/v2/exercise/?language)
 placeholder example for exercises
 Add to workout change from add to added( ng.show, ng.hide)
 
