@@ -32,15 +32,35 @@
                    </textarea>
                 <label for="imageUrl"></label>
                 <input placeholder="Enter ImageUrl" class="form-control" type="text" name="" value="" ng-model="imageUrl" />
-              </form>
-                <div>
+            </form>
+            <div>
                 <label for="Submit"></label>
-                <input type="button" class="btn btn-primary navbar-btn" name="input" ng-click="addWorkout()" value="Submit" />
+                <input data-toggle="modal" data-target="#selectModal" type="button" class="btn btn-primary navbar-btn" name="input" value="Submit" />
                 <label for="View Workout"></label>
-                <input data-toggle="modal" class="btn btn-primary navbar-btn" data-target="#workoutModal" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkout()" />
-                <label for="Home"></label>
-                <input type="button" class="btn btn-danger navbar-btn" name="button" ng-click="home()" value="Home" />
-              </div>
+                <input data-toggle="modal" class="btn btn-primary navbar-btn" data-target="#workoutModal" type="button" name="viewWorkout" value="View Workout" ng-model="viewWorkout" ng-click="viewWorkoutBtn()" />
+                <label for="Cancel"></label>
+                <input type="button" class="btn btn-danger navbar-btn" name="button" ng-click="home()" value="Cancel" />
+            </div>
+            <!-- select modal begin -->
+            <div id="selectModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Select</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="reload();" value="Add Another Workout" />
+                            <input data-toggle="modal" data-target="#workoutModal" class="btn btn-default navbar-btn" type="button" name="button" ng-click="viewWorkout()" value="View Existing Workout" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- select model end -->
+
             <!-- workout  modal begin -->
             <div id="workoutModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -52,7 +72,7 @@
                         <div class="modal-body">
                             <div class="modalRepeat container-fluid" ng-repeat='workout in workouts'>
                                 <div>
-                                    <img ng-src="{{workout.imageUrl}}" height= 200px width= 200px/>
+                                    <img ng-src="{{workout.imageUrl}}" height=200px width=200px/>
                                 </div>
                                 <div>
                                     {{workout.name}}
@@ -71,7 +91,8 @@
                     </div>
                 </div>
             </div>
-            <!-- workout  modal end -->
+            <!-- workout model end -->
+
         </div>
     </div>
 </body>

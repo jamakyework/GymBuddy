@@ -43,9 +43,10 @@
                     Exercise Description: {{exercise.description}}
                 </div>
             </div>
-            <input class="btn btn-default" type="button" name="createExercise" value="New Exercise" ng-click="createExercise()">
-            <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="addToWorkout" value="Add Existing Exercise" ng-model="viewExercise" ng-click="viewExercise()">
-
+            <div>
+                <input class="btn btn-default" type="button" name="createExercise" value="New Exercise" ng-click="createExercise()">
+                <input data-toggle="modal" data-target="#exerciseModal" class="btn btn-default" type="button" name="viewExercise" value="Add Existing Exercise" ng-model="viewExercise" ng-click="viewExercise()">
+            </div>
             <!-- exercise  modal begin -->
             <div id="exerciseModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -65,7 +66,7 @@
                                 <div>
                                     {{exercise.description}}
                                 </div>
-                                <input class="btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout(exercise)" value="Add To Workout" />
+                                <input class= "btn btn-default navbar-btn" type="button" name="button" ng-click="addToWorkout(exercise)" value="Add To Workout" />
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -77,6 +78,7 @@
             <div class="footer">
                 <input class="btn btn-danger" type="button" name="button" ng-click="home()" value="home" />
             </div>
+
         </div>
     </div>
 </body>

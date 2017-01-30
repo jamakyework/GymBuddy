@@ -165,14 +165,15 @@ Story of Gym Buddy
 
 ##Do Now:
 ---------
-
+confirm dialog both that asks if user will like to continue adding workouts or go to view workouts
 change to indicate that workout/exercise has been saved(so maybe an alert(sweet alerts?))
+Add to workout change from add to added( ng.show, ng.hide)
 Delete Exercise/Workout Btn
 No Result notification for API search
 Play with/ Sanitize API data
 (api/v2/exercise/?language)
 placeholder example for exercises
-Add to workout change from add to added( ng.show, ng.hide)
+
 
 
 
