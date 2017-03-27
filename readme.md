@@ -35,11 +35,6 @@ Users will have the capability to create custom exercises. Custom exercises once
 ##Add Custom Exercise
 To add an exercise, users will need to create a name, enter a short description of the exercise. Users will also have the options to add an image or gif of the exercise.
 
-##Edit/Update/Delete Exercise or Workout Plan
-Once users have created workout plans and custom exercises, user will have the options to either edit and update existing custom exercises and workout plans or delete custom exercises or workout plans.
-
-##Workout View
-In this view users will select the day, then select the exercise they would like to complete.
 
 ##Process Flow
 
@@ -81,11 +76,16 @@ While completing this estimate the following assumptions were made:
 * Browser compatibility will remain if new browser version is released
 
 ##Technologies
-* Node
-* Express
-* Angular
-* wger Workout Manager API
 * MongoDB
+* Angular
+* Express
+* Node
+* HTML
+* css
+*
+
+* wger Workout Manager API
+
 * Heroku
 
 ##Stretch Goals/Future Enhancements
@@ -96,6 +96,13 @@ Password recovery option; help users recover account if password is lost
 Delete account option; option for users to delete account if they no longer want to use application
 Option to check off exercise when completed for the day
 Monthly email report/summary of workouts indicating days worked out and exercises completed
+
+##Edit/Update/Delete Exercise or Workout Plan
+Once users have created workout plans and custom exercises, user will have the options to either edit and update existing custom exercises and workout plans or delete custom exercises or workout plans.
+
+##Workout View
+In this view users will select the day, then select the exercise they would like to complete.
+
 =====================================================================================================================
 
 ##GitMap completed
@@ -111,40 +118,7 @@ Monthly email report/summary of workouts indicating days worked out and exercise
 Story of Gym Buddy
 ===================
 
-##Goals
-
-##Vers 1.0
---------
-* [x] I want users workouts to be unique to logged in user.
-* [x] I want users to be able to select workouts
-* [x] I want selected workout to populate page with workout information
-* [x] I want users to be able to add exercises to selected workout.
-* [x] I want users to be able to view exercises in specific workout.
-* [x] when select workout button clicked, should display only the workout that is clicked
-* [x] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
-     objects and adds to workout on click)
-* [] Sanitize API data (view without HTML tags)
-
-
-##Vers 2.0
---------
-[] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
-[] After selecting workout I want users to be able to select days.
-[] After selecting Day I want users to be able to select  exercise.
-[] I want users to be able to upload pictures from computer
-[] select and add exercise from API
-[] add alerts
-[]  add modal change when option is selected
-[] add delete exercise button
-[] add delete workout
-[] confirm password option
-[] Add to workout change from add to added( ng.show, ng.hide)
-[] Delete Exercise/Workout Btn
-[] No Result notification for API search
-[] Play with/ Sanitize API data   (api/v2/exercise/?language)
-[] placeholder example for exercises
-
-##Completed
+##Goals Completed
  ---------
  On the most base level what should Gym Buddy Do:
 * [x] I want users to login
@@ -160,22 +134,55 @@ Story of Gym Buddy
 * [x] css for modal
 * [x] Indicate who is logged in
 * [/]make a page for redirect to unauthorized (403 page)(currently redirects to login if unauthorized)
-* []confirm dialog both that asks if user will like to continue adding workouts or go to view workouts
+* [x]confirm dialog both that asks if user will like to continue adding workouts or go to view workouts
 change to indicate that workout/exercise has been saved(so maybe an alert(sweet alerts?))
+
+##Vers 1.0
+--------
+* [x] I want users workouts to be unique to logged in user.
+* [x] I want users to be able to select workouts
+* [x] I want selected workout to populate page with workout information
+* [x] I want users to be able to add exercises to selected workout.
+* [x] I want users to be able to view exercises in specific workout.
+* [x] when select workout button clicked, should display only the workout that is clicked
+* [x] Figure out how to Add Exercise to workout(Button created, will attempt to create func that takes individual
+     objects and adds to workout on click)
+* [x] add alerts
+* [x] add modal change when option is selected
+
+##Vers 2.0
+--------
+[] Workout/Exercise
+      [] After exercise has been added to workout I want users to be able to choose day, duration of time, # of sets, # of repetitions, desired weight.
+      [] After selecting workout I want users to be able to select days.
+      [] After selecting Day I want users to be able to select  exercise.
+      [] I want users to be able to upload pictures from computer
+      [] placeholder example for exercises
+      [] Once custom exercise has been added to workout need to figure out how to add (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
+      [] I want users to be able to upload pictures from computer
+
+[] Authentication
+      [] I want users to confirm password option
+
+[]  Delete Exercise/Workout Btns
+      [] I want users to add delete exercise button
+      [] I want users to add delete workout
+
+[] API
+      [] select and add exercise from API
+      [] No Result notification for API search
+      [] Play with/ Sanitize API data (api/v2/exercise/?language)
+      [] how to display exercises from API in intelligible format (ng-sanitize?)
+      [] Sanitize API data (view without HTML tags)
+
 
 ##To Do:
 --------
-* [] Once custom exercise has been added to workout need to figure out how to add (choose day, duration of time, # of sets, # of repetitions, desired weight) (look at angular pils)
 
 
 ##Do Now:
 ---------
 
 
-
-
-
 ##Things I need help with:
 ------------------------
-  * how to display exercises from API in intelligible format (ng-sanitize?)
-  * I want users to be able to upload pictures from computer
